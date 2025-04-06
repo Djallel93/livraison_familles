@@ -1,13 +1,27 @@
 const SHEET_DEF = {
+  RESPONSABLE: {
+    SHEET_NAME: "reponsable",
+    COLUMNS: {
+      ID: { INDEX: 1, TYPE: "number" },
+      NOM: { INDEX: 2, TYPE: "string" },
+      PRENOM: { INDEX: 3, TYPE: "string" },
+      MAIL: { INDEX: 4, TYPE: "string" },
+      TELEPHONE: { INDEX: 5, TYPE: "string" },
+      SECTEUR: { INDEX: 6, TYPE: "string" },
+      ROLE: { INDEX: 7, TYPE: "string" },
+    },
+  },
   LIVREUR: {
     SHEET_NAME: "livreur",
     COLUMNS: {
-      NOM: { INDEX: 1, TYPE: "string" },
-      PRENOM: { INDEX: 2, TYPE: "string" },
-      MAIL: { INDEX: 3, TYPE: "string" },
-      TELEPHONE: { INDEX: 4, TYPE: "string" },
-      SECTEUR: { INDEX: 5, TYPE: "string" }, /////////
-      ROLE: { INDEX: 6, TYPE: "string" },
+      ID: { INDEX: 1, TYPE: "number" },
+      NOM: { INDEX: 2, TYPE: "string" },
+      PRENOM: { INDEX: 3, TYPE: "string" },
+      MAIL: { INDEX: 4, TYPE: "string" },
+      TELEPHONE: { INDEX: 5, TYPE: "string" },
+      TYPE_VEHICULE: { INDEX: 6, TYPE: "string" },
+      SECTEUR: { INDEX: 7, TYPE: "string" },
+      ID_RESPONSABLE: { INDEX: 8, TYPE: "number" },
     },
   },
   FAMILLE: {
@@ -16,16 +30,37 @@ const SHEET_DEF = {
       ID: { INDEX: 1, TYPE: "number" },
       NOM: { INDEX: 2, TYPE: "string" },
       PRENOM_CONTACT: { INDEX: 3, TYPE: "string" },
-      CIRCONSTANCES: { INDEX: 4, TYPE: "string" },
-      NOMBRE_ADULTE: { INDEX: 5, TYPE: "number" },
-      NOMBRE_ENFANT: { INDEX: 6, TYPE: "number" },
-      ADRESSE: { INDEX: 7, TYPE: "string" },
-      ID_QUARTIER: { INDEX: 8, TYPE: "number" },
-      TELEPHONE: { INDEX: 9, TYPE: "string" },
-      ACCEPTE_DENRÉES: { INDEX: 10, TYPE: "boolean" },
-      ETAT: { INDEX: 11, TYPE: "string" },
-      PREMIER_CONTACT: { INDEX: 12, TYPE: "string" },
-      SPECIFITES: { INDEX: 13, TYPE: "string" },
+      ZAKAT_EL_FITR: { INDEX: 4, TYPE: "boolean" },
+      SADAQA: { INDEX: 5, TYPE: "boolean" },
+      NOMBRE_ADULTE: { INDEX: 6, TYPE: "number" },
+      NOMBRE_ENFANT: { INDEX: 7, TYPE: "number" },
+      ADRESSE: { INDEX: 8, TYPE: "string" },
+      ID_QUARTIER: { INDEX: 9, TYPE: "number" },
+      SE_DEPLACE: { INDEX: 10, TYPE: "boolean" },
+      TELEPHONE: { INDEX: 11, TYPE: "string" },
+      TELEPHONE_BIS: { INDEX: 12, TYPE: "string" },
+      CIRCONSTANCES: { INDEX: 13, TYPE: "string" },
+      ETAT: { INDEX: 14, TYPE: "string" },
+      PREMIER_CONTACT: { INDEX: 15, TYPE: "string" },
+      RESSENTIT: { INDEX: 16, TYPE: "string" },
+      SPECIFITES: { INDEX: 17, TYPE: "string" },
+    }
+  },
+  LIVRAISON: {
+    SHEET_NAME: "livraison",
+    COLUMNS: {
+      ID_FAMILLE: { INDEX: 1, TYPE: "number" },
+      DATE_LIVRAISONS: { INDEX: 2, TYPE: "date" },
+      OCCASION: { INDEX: 3, TYPE: "string" },
+      ID_LIVREUR: { INDEX: 4, TYPE: "number" },
+      ID_BINOME: { INDEX: 5, TYPE: "number" },
+      NOMBRE_PART: { INDEX: 6, TYPE: "number" },
+      AVEC_ENFANT: { INDEX: 7, TYPE: "boolean" },
+      PRETE: { INDEX: 8, TYPE: "boolean" },
+      EN_COURS: { INDEX: 9, TYPE: "boolean" },
+      LIVRE: { INDEX: 10, TYPE: "boolean" },
+      NOTE: { INDEX: 11, TYPE: "number" },
+      COMMENTAIRE: { INDEX: 12, TYPE: "string" },
     }
   },
   QUARTIER: {
@@ -35,26 +70,29 @@ const SHEET_DEF = {
       NOM: { INDEX: 2, TYPE: "string" },
       LATITUDE: { INDEX: 3, TYPE: "number" },
       LOGITUDE: { INDEX: 4, TYPE: "number" },
-      VILLE: { INDEX: 5, TYPE: "string" },
-      CODE_POSTAL: { INDEX: 6, TYPE: "number" },
-      REGION: { INDEX: 7, TYPE: "string" },
-      PAYS: { INDEX: 8, TYPE: "string" },
+      ID_VILLE: { INDEX: 5, TYPE: "number" }
     },
   },
-  LIVRAISON: {
-    SHEET_NAME: "livraison",
+  VILLE: {
+    SHEET_NAME: "ville",
     COLUMNS: {
-      ID_FAMILLE: { INDEX: 1, TYPE: "number" },
-      DATE_LIVRAISONS: { INDEX: 2, TYPE: "date" },
-      OCCASION: { INDEX: 3, TYPE: "string" },
-      LIVREUR: { INDEX: 4, TYPE: "string" },
-      NOMBRE_PART: { INDEX: 5, TYPE: "number" },
-      AVEC_ENFANT: { INDEX: 6, TYPE: "boolean" },
-      NOTE: { INDEX: 7, TYPE: "number" },
-      COMMENTAIRE: { INDEX: 8, TYPE: "string" },
+      ID: { INDEX: 1, TYPE: "number" },
+      NOM: { INDEX: 2, TYPE: "string" },
+      CODE_POSTAL: { INDEX: 3, TYPE: "number" },
+      DEPARTEMENT: { INDEX: 4, TYPE: "string" },
+      PAYS: { INDEX: 5, TYPE: "string" },
     },
   },
-};
+  AUX: {
+    SHEET_NAME: "aux",
+    COLUMNS: {
+      USER_GROUP: { INDEX: 1, TYPE: "string" },
+      OCCASION: { INDEX: 2, TYPE: "string" },
+      LIVREURE: { INDEX: 2, TYPE: "string" },
+    }
+  }
+}
+
 
 function getSheetByName(sheetName) {
   return SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetName.trim());

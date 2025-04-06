@@ -1,80 +1,148 @@
-function notifyAllLivreurs(occasion, dateLivraison) {
+function notifyAllLivreurs(occasion, dateOccasion) {
     console.log("Notification de tous les livreurs");
 
     const livraisonData = getSheetDataByName(SHEET_DEF.LIVRAISON.SHEET_NAME);
-    const idFamilleColIndex = getColumnIndex("LIVRAISON", "ID_FAMILLE");
+    const idLivreurIdx = getColumnIndex("LIVRAISON", "ID_LIVREUR");
     const dateLivraisonColIndex = getColumnIndex("LIVRAISON", "DATE_LIVRAISONS");
     const occasionColIndex = getColumnIndex("LIVRAISON", "OCCASION");
-    const livreurColIndex = getColumnIndex("LIVRAISON", "LIVREUR");
-    const nbrPartColIndex = getColumnIndex("LIVRAISON", "NOMBRE_PART");
-    const avecEnfantColIndex = getColumnIndex("LIVRAISON", "AVEC_ENFANT");
+    const livreColIndex = getColumnIndex("LIVRAISON", "LIVRE");
+    console.log("dateLivraison recu : " + dateOccasion);
 
-    // Objet pour stocker les infos par livreur
-    let livreursData = {};
 
-    livraisonData.forEach(row => {
-        if (
-            row[occasionColIndex] === occasion
-            && row[dateLivraisonColIndex] === dateLivraison
-        ) {
-            let livreur = row[livreurColIndex];
-            let familleObj = {
-                id: row[idFamilleColIndex],
-                nombre_part: row[nbrPartColIndex],
-                avec_enfant: row[avecEnfantColIndex]
-            };
-            if (!livreursData[livreur]) {
-                livreursData[livreur] = {
-                    nom: livreur,
-                    familles: []
-                };
-            }
-            livreursData[livreur].familles.push(familleObj);
-        }
-    });
+    const filteredData = livraisonData
+        .filter((row) => {
+            const rawDate = row[dateLivraisonColIndex];
+            const idLivreur = row[idLivreurIdx];
 
-    Object.keys(livreursData).forEach(livreur => {
+            // Ignore rows with empty id_livreur
+            if (!idLivreur) return false;
+
+            // Ensure the date is valid
+            if (!rawDate || isNaN(new Date(rawDate))) return false;
+
+            if (row[livreColIndex] === true) return false;
+
+            return (
+                new Date(rawDate).toISOString().split("T")[0] === dateOccasion &&
+                row[occasionColIndex] === occasion
+            );
+        })
+        // Keep only unique id_livreur values
+        .filter((row, index, self) =>
+            index === self.findIndex((r) => r[idLivreurIdx] === row[idLivreurIdx])
+        );
+
+
+    filteredData.forEach(row => {
+        console.log("Notification du livreur " + row[idLivreurIdx])
         notifyLivreur(
-            livreursData[livreur].familleObj,
-            livreursData[livreur].nom,
+            row[idLivreurIdx],
             occasion,
-            dateLivraison
+            dateOccasion
         );
     });
 }
 
+function notifyLivreur(livreurID, occasion, dateOccasion) {
 
-function notifyLivreur(famille, livreur, occasion, dateLivraison) {
-    const livreur = getUserDetailsByName(livreur)
-    if (!livreur) {
-        console.error("Impossible de récupérer les informations du livreur");
-        return null;
+    console.log("Préparation de la notification pour le livreur " + livreurID);
+    // Vérifier si les paramètres sont valides
+    if (!livreurID || !occasion || !dateOccasion) {
+        console.error("Paramètres manquants pour la notification");
+        return;
     }
 
-    const subject = dateLivraison + " - Familles a livrer a - " + occasion;
-    let message = `Bonjour ${livreur.nom} ${livreur.prenom},\n\nVoici la liste des familles à livrer pour l'occasion "${occasion}" le ${dateLivraison} :\n\n`;
+    let formatedLivreurID = Number(livreurID);
 
-    livreursData[livreur].familles.forEach(famille => {
-        const famille = getFamilyDetails(famille.id);
-        if (!famille) {
-            console.error("Impossible de récupérer les informations de la famille " + famille.id);
-            return null;
+    const livreurInfo = getLivreurDetailsById(formatedLivreurID)
+    if (!livreurInfo) {
+        console.error("Impossible de récupérer les informations du livreur " + livreurID);
+        return;
+    }
+
+    const responsableInfo = getResponsableDetailsById(livreurInfo.responsable)
+    if (!responsableInfo) {
+        console.error("Impossible de récupérer les informations du responsable " + livreurInfo.responsable);
+        return;
+    }
+
+    const livraisonData = getSheetDataByName(SHEET_DEF.LIVRAISON.SHEET_NAME);
+    const idLivreurIdx = getColumnIndex("LIVRAISON", "ID_LIVREUR");
+    const idBinomeIdx = getColumnIndex("LIVRAISON", "ID_BINOME");
+    const idFamilleColIndex = getColumnIndex("LIVRAISON", "ID_FAMILLE");
+    const dateLivraisonColIndex = getColumnIndex("LIVRAISON", "DATE_LIVRAISONS");
+    const occasionColIndex = getColumnIndex("LIVRAISON", "OCCASION");
+    const nbrPartColIndex = getColumnIndex("LIVRAISON", "NOMBRE_PART");
+    const avecEnfantColIndex = getColumnIndex("LIVRAISON", "AVEC_ENFANT");
+    const livreColIndex = getColumnIndex("LIVRAISON", "LIVRE");
+
+    const subject = "Familles à livrer - " + occasion;
+
+    let message = `السلام عليكم و رحمة الله و بركاته
+        Voici la liste des familles à livrer á l'occasion de '${occasion}'\n\n`;
+
+    const filteredData = livraisonData
+        .filter((row) => {
+            const rawDate = row[dateLivraisonColIndex];
+            const idLivreur = row[idLivreurIdx];
+
+            // Ignore rows with empty id_livreur
+            if (!idLivreur) return false;
+
+            // Ensure the date is valid
+            if (!rawDate || isNaN(new Date(rawDate))) return false;
+
+            if (row[livreColIndex] === true) return false;
+
+            return (
+                new Date(rawDate).toISOString().split("T")[0] === dateOccasion &&
+                row[occasionColIndex] === occasion
+                && idLivreur === formatedLivreurID
+            );
+        })
+
+        // const binomeInfo = getLivreurDetailsById(filteredData[0][idBinomeIdx])
+        // if (!binomeInfo) {
+        //     console.error("Impossible de récupérer les informations du livreur " + filteredData[0][idBinomeIdx]);
+        //     return;
+        // }
+
+    filteredData.forEach(row => {
+        let familleInfo = getFamilyDetails(row[idFamilleColIndex]);
+        if (!familleInfo) {
+            console.error("Impossible de récupérer les informations de la famille " + familleInfo.id);
+            return;
         }
-        message += `- Famille : ${famille.nom}, 
-            ${famille.nombre_part} part(s), 
-            ${famille.avec_enfant ?
-                "Avec " + famille.nombreEnfant + " enfant(s)" :
-                "Sans enfant"}\n`;
+        message += `- Famille : ${familleInfo.id}
+                    Adresse : ${familleInfo.adresse}, ${familleInfo.codePostal}, ${familleInfo.ville}, 
+                    Nombre de part(s) : ${row[nbrPartColIndex]} part(s)
+                    ${row[avecEnfantColIndex] ?
+                "Avec " + familleInfo.nombreEnfant + " enfant(s)" :
+                "Sans enfant"}
+                    Numéro Tel: ${familleInfo.telephone ?
+                familleInfo.telephone :
+                "Inconnu"}
+                    ${familleInfo.telephoneBis ?
+                "Numéro Tel 2: " + familleInfo.telephoneBis :
+                ""}\n`;
     });
 
-    message += "\nMerci pour votre aide !\n\nCordialement,";
+    message += "\nMerci de contacter " + responsableInfo.telephone + " après chaque livraison.";
+
+    message += "\nMerci pour votre aide !\n\nبارك الله فيك,";
+
     const options = {
         name: "AMANA",
         noReply: true,
     };
 
+    console.log("Notification du livreur " + livreurInfo.nom + " " + livreurInfo.prenom);
+    // console.log("Notification du binôme " + binomeInfo.nom + " " + binomeInfo.prenom);
+
+    // const destinataires = livreurInfo.email + "," + binomeInfo.email
     try {
-        MailApp.sendEmail(livreur.email, subject, message, options);
+        MailApp.sendEmail(livreurInfo.email, subject, message, options);
+        console.log("Le mail a été envoyé aux adresses " + destinataires);
     } catch (error) {
         console.error("Échec de l'envoi du mail: " + error.toString());
     }

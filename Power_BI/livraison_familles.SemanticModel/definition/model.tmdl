@@ -1,0 +1,27 @@
+model Model
+	culture: en-GB
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: fr-FR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["famille","livraison","livreur","quartier","reponsable","ville"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.140.1577.0 (25.02)+00af0910c5ca19a229c472b0dfc17a2c488f6b0a
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table famille
+ref table livraison
+ref table DateTableTemplate_75a0fb5b-7484-4877-87b7-a30c9e70c76e
+ref table LocalDateTable_300dfb0d-eedb-46c0-9f36-86c96176e501
+ref table livreur
+ref table quartier
+ref table reponsable
+ref table ville
+
+ref cultureInfo en-GB
+

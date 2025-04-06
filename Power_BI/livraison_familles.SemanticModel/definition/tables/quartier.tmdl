@@ -1,0 +1,72 @@
+table quartier
+	lineageTag: 6b6fcb34-2656-4604-8deb-19696ca8bcc0
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 70d8932c-d09d-41bc-aacc-3877bb94ec53
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nom
+		dataType: string
+		lineageTag: ca4c52c1-95b6-4438-a3d6-1785e43dd337
+		summarizeBy: none
+		sourceColumn: nom
+
+		annotation SummarizationSetBy = Automatic
+
+	column latitude
+		dataType: double
+		lineageTag: 9a297a73-b73f-451f-a0f8-c121560c2b17
+		dataCategory: Latitude
+		summarizeBy: sum
+		sourceColumn: latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column logitude
+		dataType: double
+		lineageTag: 53d0c73c-ed6b-4a6e-b737-53bff1a11771
+		dataCategory: Longitude
+		summarizeBy: sum
+		sourceColumn: logitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column id_ville
+		dataType: int64
+		formatString: 0
+		lineageTag: 90e15b38-b893-451f-b186-731e482dabff
+		summarizeBy: none
+		sourceColumn: id_ville
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Full Address Quartier' = quartier[nom] & ", " & RELATED(ville[nom]) & ", " & RELATED(ville[departement]) & ", " & RELATED(ville[pays])
+		lineageTag: ff5103f5-abc9-4e41-a0d2-5ba748743478
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition quartier = m
+		mode: import
+		source =
+				let
+				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1pPshgPXbT2r9MJy1JejTwpvZ_lKZootVlxk35DsG1Zo/edit?usp=sharing"),
+				    quartier_Table = Source{[name="quartier",ItemKind="Table"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(quartier_Table, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"id", Int64.Type}, {"nom", type text}, {"latitude", type number}, {"logitude", type number}, {"id_ville", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

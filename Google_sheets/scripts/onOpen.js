@@ -1,30 +1,63 @@
 function onOpen() {
     const ui = SpreadsheetApp.getUi();
     ui.createMenu("Fonctions Personnalisées")
-        .addItem("Notification des livreurs", "showNotificationDialog")
+        .addItem("Création des étiquettes", "generateEtiquettes")
+        .addSubMenu(
+            ui
+                .createMenu("Fiches")
+                .addItem("Création de toutes les fiches", "showNotificationDialogGenerateAll")
+                .addItem("Création d'une fiche pour un livreur", "showNotificationDialogGenerate")
+        )
+        .addSubMenu(
+            ui
+                .createMenu("Notification")
+                .addItem("Notification de tous les livreurs", "showNotificationDialogNotifyAll")
+                .addItem("Notification d'un livreur", "showNotificationDialogNotify")
+        )
         .addToUi();
 }
 
-function showNotificationDialog() {
+// Open dialog for notifications
+function showNotificationDialogNotify() {
+    showNotificationDialog("notify");
+}
+
+function showNotificationDialogNotifyAll() {
+    showNotificationDialog("notifyAll");
+}
+
+// Open dialog for document generation
+function showNotificationDialogGenerate() {
+    showNotificationDialog("generate");
+}
+
+function showNotificationDialogGenerateAll() {
+    showNotificationDialog("generateAll");
+}
+
+// Generalized function to load the form
+function showNotificationDialog(action) {
     const ui = SpreadsheetApp.getUi();
+    const sheet = getSheetByName(SHEET_DEF.AUX.SHEET_NAME);
 
-    // Demande l'occasion
-    const occasionResponse = ui.prompt("Notification des livreurs", "Entrez l'occasion :", ui.ButtonSet.OK_CANCEL);
-    if (occasionResponse.getSelectedButton() !== ui.Button.OK) return; // Stop si annulé
-    const occasion = occasionResponse.getResponseText().trim();
+    // Get occasions from the sheet
+    const occasions = sheet.getRange("B2:B" + sheet.getLastRow()).getValues()
+        .flat()
+        .filter(val => val);
 
-    // Demande la date de livraison
-    const dateResponse = ui.prompt("Notification des livreurs", "Entrez la date de livraison (YYYY-MM-DD) :", ui.ButtonSet.OK_CANCEL);
-    if (dateResponse.getSelectedButton() !== ui.Button.OK) return; // Stop si annulé
-    const dateLivraison = dateResponse.getResponseText().trim();
-
-    // Vérification des entrées
-    if (!occasion || !dateLivraison) {
-        ui.alert("Erreur", "Veuillez entrer des valeurs valides.", ui.ButtonSet.OK);
+    if (occasions.length === 0) {
+        ui.alert("Erreur", "Aucune occasion disponible.", ui.ButtonSet.OK);
         return;
     }
 
-    notifyAllLivreurs(occasion, dateLivraison);
+    // Pass data to the HTML file
+    let htmlTemplate = HtmlService.createTemplateFromFile("dialog");
+    htmlTemplate.occasions = occasions;
+    htmlTemplate.action = action; // Pass the action ("notify" or "generate")
 
-    ui.alert("Succès", "Les notifications ont été envoyées.", ui.ButtonSet.OK);
+    let htmlOutput = htmlTemplate.evaluate()
+        .setWidth(400)
+        .setHeight(400);
+
+    ui.showModalDialog(htmlOutput, "Sélectionnez une occasion et une date");
 }

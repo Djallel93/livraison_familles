@@ -1,0 +1,86 @@
+table livreur
+	lineageTag: 908547a1-9701-49c7-9228-6ef3e2db3a06
+
+	column nom
+		dataType: string
+		lineageTag: 930c205e-e73f-4cae-ba7d-08321e6943a3
+		summarizeBy: none
+		sourceColumn: nom
+
+		annotation SummarizationSetBy = Automatic
+
+	column prenom
+		dataType: string
+		lineageTag: 4d11474d-27fc-4250-b0f6-762c928cf919
+		summarizeBy: none
+		sourceColumn: prenom
+
+		annotation SummarizationSetBy = Automatic
+
+	column mail
+		dataType: string
+		lineageTag: a15e383b-e4d8-4889-a435-d73f1c4fac05
+		summarizeBy: none
+		sourceColumn: mail
+
+		annotation SummarizationSetBy = Automatic
+
+	column telephone
+		dataType: int64
+		formatString: 0
+		lineageTag: 766a2de4-81a9-4432-ba7f-987bef50a8b4
+		summarizeBy: sum
+		sourceColumn: telephone
+
+		annotation SummarizationSetBy = Automatic
+
+	column type_vehicule
+		dataType: string
+		lineageTag: 1176b47d-9862-4aec-841e-18197488563e
+		summarizeBy: none
+		sourceColumn: type_vehicule
+
+		annotation SummarizationSetBy = Automatic
+
+	column secteur
+		dataType: string
+		lineageTag: 2fa0679c-1f70-45a3-98d9-5e89d5aa6392
+		summarizeBy: none
+		sourceColumn: secteur
+
+		annotation SummarizationSetBy = Automatic
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 11fb2f75-8f87-4570-939a-9b884ea315ab
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_responsable
+		dataType: int64
+		formatString: 0
+		lineageTag: b9cfbdb8-8e33-4ba3-8770-ed2168cd3aaa
+		summarizeBy: none
+		sourceColumn: id_responsable
+
+		annotation SummarizationSetBy = Automatic
+
+	partition livreur = m
+		mode: import
+		source =
+				let
+				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1pPshgPXbT2r9MJy1JejTwpvZ_lKZootVlxk35DsG1Zo/edit?usp=sharing"),
+				    livreur_Table = Source{[name="livreur",ItemKind="Table"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(livreur_Table, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"nom", type text}, {"prenom", type text}, {"mail", type text}, {"telephone", Int64.Type}, {"type_vehicule", type any}, {"secteur", type any}, {"id_responsable", Int64.Type}, {"id", Int64.Type}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each ([nom] <> ""))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

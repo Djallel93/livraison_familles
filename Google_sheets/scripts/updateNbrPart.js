@@ -18,8 +18,8 @@ function updateNbrPart(currSheet, range) {
 
     const famille = getFamilyDetails(idFamille);
 
+    console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAA");
     if (!famille) return;
-
     var nombrePart = famille.nombreAdulte + famille.nombreEnfant;
     console.log("La famille " + famille.nom + " existe dans la feuille " + SHEET_DEF.FAMILLE.SHEET_NAME + ". Mise a jour en cours");
 

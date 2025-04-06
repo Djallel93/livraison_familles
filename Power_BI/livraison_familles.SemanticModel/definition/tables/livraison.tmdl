@@ -1,0 +1,137 @@
+table livraison
+	lineageTag: 39875015-1ea4-45a5-8999-3a4291eef4e9
+
+	column id_famille
+		dataType: int64
+		formatString: 0
+		lineageTag: 20edd977-5af7-4272-b0c2-f2e86af99b99
+		summarizeBy: none
+		sourceColumn: id_famille
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_livraisons
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e7b9193b-2455-4eea-931f-61d43c21d310
+		summarizeBy: none
+		sourceColumn: date_livraisons
+
+		variation Variation
+			isDefault
+			relationship: f11ccee6-9dfc-4398-957d-55b357e55203
+			defaultHierarchy: LocalDateTable_300dfb0d-eedb-46c0-9f36-86c96176e501.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column occasion
+		dataType: string
+		lineageTag: 4ee7f4e0-7638-4392-bd45-b1581363ddcf
+		summarizeBy: none
+		sourceColumn: occasion
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_part
+		dataType: int64
+		formatString: 0
+		lineageTag: f25276b4-65a4-4998-bc90-48fc8e00b640
+		summarizeBy: sum
+		sourceColumn: nombre_part
+
+		annotation SummarizationSetBy = Automatic
+
+	column avec_enfant
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: da4648d7-bd83-4f04-9474-d5f5b429afb1
+		summarizeBy: none
+		sourceColumn: avec_enfant
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_livreur
+		dataType: int64
+		formatString: 0
+		lineageTag: e41ddbfd-e5ea-4ec5-946b-3796760bd6c2
+		summarizeBy: none
+		sourceColumn: id_livreur
+
+		annotation SummarizationSetBy = Automatic
+
+	column prete
+		dataType: string
+		lineageTag: 92df12d7-b303-47ba-b2e1-08d78cda126e
+		summarizeBy: none
+		sourceColumn: prete
+
+		annotation SummarizationSetBy = Automatic
+
+	column en_cours
+		dataType: string
+		lineageTag: 12ec0b0e-b8e5-4f45-819e-4c13cf183d1e
+		summarizeBy: none
+		sourceColumn: en_cours
+
+		annotation SummarizationSetBy = Automatic
+
+	column livre
+		dataType: string
+		lineageTag: 5181ea3d-e5d5-43bd-9a26-d4d940035f2c
+		summarizeBy: none
+		sourceColumn: livre
+
+		annotation SummarizationSetBy = Automatic
+
+	column etat_livraison = ```
+			
+			    IF(livraison[livre], "4 - Livrée",
+			        IF(livraison[en_cours], "3 - En cours de livraison",
+			            IF(livraison[prete], "2 - Prête à être livrée", "1 - Non préparé")
+			        )
+			    )
+			```
+		lineageTag: 8bd02f54-8e1e-40e7-a916-a8cabcfbaf2f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column filtre_temp
+		dataType: int64
+		formatString: 0#:##
+		lineageTag: 59ed0d28-2a49-4ac2-b75e-870be810f7c2
+		summarizeBy: sum
+		sourceColumn: filtre_temp
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column id_binome
+		dataType: string
+		lineageTag: 438ff522-8eaa-4740-b410-d8512b790ceb
+		summarizeBy: none
+		sourceColumn: id_binome
+
+		annotation SummarizationSetBy = Automatic
+
+	partition livraison = m
+		mode: import
+		source =
+				let
+				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1pPshgPXbT2r9MJy1JejTwpvZ_lKZootVlxk35DsG1Zo/edit?usp=sharing"),
+				    livraison_Table = Source{[name="livraison",ItemKind="Table"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(livraison_Table, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"id_famille", Int64.Type}, {"date_livraisons", type datetime}, {"occasion", type text}, {"id_livreur", Int64.Type}, {"nombre_part", Int64.Type}, {"avec_enfant", type logical}, {"note", type any}, {"commentaire", type any}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each ([id_famille] <> null)),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"note", "commentaire"}),
+				    #"Added Custom" = Table.AddColumn(#"Removed Columns", "Custom", each Number.From(Text.From(Time.Hour([date_livraisons])) & Text.PadStart(Text.From(Time.Minute([date_livraisons])), 2, "0" ))),
+				    #"Renamed Columns" = Table.RenameColumns(#"Added Custom",{{"Custom", "filtre_temp"}}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Renamed Columns",{{"filtre_temp", Int64.Type}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

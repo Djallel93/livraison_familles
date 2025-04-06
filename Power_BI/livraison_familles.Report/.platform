@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "livraison_familles"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0956e861-d754-45fe-b27b-d68c62d98c9f"
+  }
+}

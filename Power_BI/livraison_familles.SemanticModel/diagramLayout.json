@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 469.11241218062975,
+            "y": 852.56629700000008
+          },
+          "nodeIndex": "famille",
+          "nodeLineageTag": "a0f33413-5815-4215-93ee-3627c500b35a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1077.6225234153599,
+            "y": 891.57805
+          },
+          "nodeIndex": "livraison",
+          "nodeLineageTag": "39875015-1ea4-45a5-8999-3a4291eef4e9",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1101.6949524036411,
+            "y": 524
+          },
+          "nodeIndex": "livreur",
+          "nodeLineageTag": "908547a1-9701-49c7-9228-6ef3e2db3a06",
+          "size": {
+            "height": 266,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 392.99751700000007,
+            "y": 463.90200300000004
+          },
+          "nodeIndex": "quartier",
+          "nodeLineageTag": "6b6fcb34-2656-4604-8deb-19696ca8bcc0",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1115.59471341536,
+            "y": 106.720245
+          },
+          "nodeIndex": "reponsable",
+          "nodeLineageTag": "d217f910-281b-464d-9c33-32e22187f672",
+          "size": {
+            "height": 244,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 386.20029800000009,
+            "y": 97.435855000000032
+          },
+          "nodeIndex": "ville",
+          "nodeLineageTag": "35aeec7c-22c3-4cb0-871a-1d9faf9acaa5",
+          "size": {
+            "height": 214,
+            "width": 234
+          },
+          "zIndex": 5
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 56.447393005377734,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

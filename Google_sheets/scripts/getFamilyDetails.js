@@ -1,4 +1,4 @@
-function getFamilyDetails(idFamille){
+function getFamilyDetails(idFamille) {
     if (typeof idFamille !== "number") {
         console.error("Paramètres invalides fournis à getFamilyDetails");
         return null;
@@ -11,6 +11,9 @@ function getFamilyDetails(idFamille){
 
     if (famille) {
         console.log(`La famille ${idFamille} existe dans la feuille famille`);
+        quartier = getQuartierDetails(
+            famille[getColumnIndex("FAMILLE", "ID_QUARTIER")]
+        );
         return {
             id: famille[getColumnIndex("FAMILLE", "ID")],
             nom: famille[getColumnIndex("FAMILLE", "NOM")],
@@ -19,9 +22,11 @@ function getFamilyDetails(idFamille){
             nombreAdulte: famille[getColumnIndex("FAMILLE", "NOMBRE_ADULTE")],
             nombreEnfant: famille[getColumnIndex("FAMILLE", "NOMBRE_ENFANT")],
             adresse: famille[getColumnIndex("FAMILLE", "ADRESSE")],
-            idQuartier: famille[getColumnIndex("FAMILLE", "ID_QUARTIER")],
+            codePostal: quartier.codePostal,
+            ville: quartier.ville,
             telephone: formatNumeroTelephone(famille[getColumnIndex("FAMILLE", "TELEPHONE")]),
-            accepteDenrées: famille[getColumnIndex("FAMILLE", "ACCEPTE_DENRÉES")],
+            telephoneBis: formatNumeroTelephone(famille[getColumnIndex("FAMILLE", "TELEPHONE_BIS")]),
+            se_deplace: famille[getColumnIndex("FAMILLE", "SE_DEPLACE")],
             etat: famille[getColumnIndex("FAMILLE", "ETAT")],
             premierContact: famille[getColumnIndex("FAMILLE", "PREMIER_CONTACT")],
             specifites: famille[getColumnIndex("FAMILLE", "SPECIFITES")],
@@ -33,11 +38,11 @@ function getFamilyDetails(idFamille){
 }
 
 function formatNumeroTelephone(numero) {
-    // Convertir le nombre en chaîne de caractères
-    var numeroString = numero.toString();
-    console.log("String : " + numeroString);
-    console.log("length : " + numeroString.length);
+    if (!numero) {
+        return;
+    }
 
+    var numeroString = numero.toString();
     // Vérifier si la longueur du numéro est correcte
     if (numeroString.length !== 9) {
         throw new Error("Le numéro doit comporter 9 chiffres.");
@@ -45,7 +50,7 @@ function formatNumeroTelephone(numero) {
 
     // Formater le numéro de téléphone
     var numeroFormate =
-        "+33 (0) " +
+        "+33 " +
         numeroString.substr(0, 1) +
         " " +
         numeroString.substr(1, 2) +

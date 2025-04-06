@@ -1,0 +1,5282 @@
+cultureInfo en-GB
+
+	linguisticMetadata =
+			{
+			  "Version": "3.5.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "famille": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "famille": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "famille.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "famille.nom": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "nom"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nom": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "famille.prenom_contact": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "prenom_contact"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "prenom contact": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "prenom_contact": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "prenom connection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "prenom interaction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "prenom phone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "prenom telephone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "prenom communication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "prenom e-mail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "prenom link": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "prenom reach": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "prenom e mail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.607
+			          }
+			        },
+			        {
+			          "prenom phone number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "famille.zakat_el_fitr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "Zakat_el_fitr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "zakat el fitr": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Zakat_el_fitr": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "famille.sadaqa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "Sadaqa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sadaqa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "famille.nombre_adulte": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "nombre_adulte"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre adulte": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nombre_adulte": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "famille.nombre_enfant": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "nombre_enfant"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre enfant": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nombre_enfant": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "famille.adresse": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "adresse"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "adresse": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "address": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "famille.id_quartier": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "id_quartier"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id quartier": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_quartier": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification quartier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity quartier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier quartier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential quartier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "famille.se_deplace": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "se_deplace"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "se deplace": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "se_deplace": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "famille.tel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "Tel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tel": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "famille.tel__bis": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "Tel. bis"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tel. bis": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "famille.full_address": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "Full Address"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "full address": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "address": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "full location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "full direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "full residence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "residence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "full contact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "contact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "livraison": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "livraison": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "livraison.id_famille": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "ConceptualProperty": "id_famille"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id famille": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_famille": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification famille": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity famille": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier famille": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential famille": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "livraison.date_livraison": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "ConceptualProperty": "date_livraisons"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date livraison": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date_livraisons": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "moment livraison": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period livraison": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "livraison.date_livraison.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "VariationSource": "date_livraisons",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date hierarchy livraison": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "livraison.date_livraison.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "VariationSource": "date_livraisons",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year livraison": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date livraison year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date livraison yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "moment livraison year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "yr livraison": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period livraison year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "livraison.date_livraison.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "VariationSource": "date_livraisons",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarter livraison": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date livraison quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date livraison qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "qtr livraison": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.667
+			          }
+			        },
+			        {
+			          "moment livraison quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "period livraison quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "livraison.date_livraison.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "VariationSource": "date_livraisons",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month livraison": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date livraison month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date livraison mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "moment livraison month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "mth livraison": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period livraison month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "livraison.date_livraison.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "VariationSource": "date_livraisons",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day livraison": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date livraison day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment livraison day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "period livraison day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "livraison.occasion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "ConceptualProperty": "occasion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "occasion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "juncture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "occurrence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "case": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "event": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "instance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "incident": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "circumstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "point": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "spot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "livraison.nombre_part": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "ConceptualProperty": "nombre_part"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre part": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nombre_part": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "nombre quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "nombre share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nombre portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nombre fragment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nombre slice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nombre chunk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nombre amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nombre measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nombre cut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nombre segment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "livraison.avec_enfant": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "ConceptualProperty": "avec_enfant"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avec enfant": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "avec_enfant": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "livraison.id_livreur": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "ConceptualProperty": "id_livreur"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id livreur": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_livreur": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification livreur": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity livreur": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier livreur": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential livreur": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "livreur": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livreur"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "livreur": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "livreur.nom": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livreur",
+			          "ConceptualProperty": "nom"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nom": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "livreur.prenom": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livreur",
+			          "ConceptualProperty": "prenom"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "prenom": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "livreur.mail": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livreur",
+			          "ConceptualProperty": "mail"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mail": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mailing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "posting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "post-office": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "delivery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "correspondence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "post": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "livreur.telephone": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livreur",
+			          "ConceptualProperty": "telephone"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "telephone": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "handset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "receiver": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "phone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mobile": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "livreur.type_vehicule": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livreur",
+			          "ConceptualProperty": "type_vehicule"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "type vehicule": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "type_vehicule": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "category vehicule": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "genre vehicule": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "manner vehicule": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "variety vehicule": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "brand vehicule": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "class vehicule": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "kind vehicule": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "style vehicule": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "form vehicule": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "grouping vehicule": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "livreur.secteur": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livreur",
+			          "ConceptualProperty": "secteur"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "secteur": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "livreur.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livreur",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "livreur.id_responsable": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livreur",
+			          "ConceptualProperty": "id_responsable"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id responsable": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_responsable": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification responsable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity responsable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier responsable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential responsable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "quartier": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "quartier"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quartier": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "quartier.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "quartier",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "quartier.nom": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "quartier",
+			          "ConceptualProperty": "nom"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nom": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "quartier.latitude": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "quartier",
+			          "ConceptualProperty": "latitude"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "latitude": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "leeway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "freedom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "autonomy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "liberty": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "opportunity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "room": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "scope": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "space": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "rope": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "quartier.logitude": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "quartier",
+			          "ConceptualProperty": "logitude"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "logitude": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "quartier.id_ville": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "quartier",
+			          "ConceptualProperty": "id_ville"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id ville": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_ville": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification ville": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity ville": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier ville": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential ville": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "quartier.full_address_quartier": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "quartier",
+			          "ConceptualProperty": "Full Address Quartier"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "full address quartier": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "address quartier": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "full location quartier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "full direction quartier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "full residence quartier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "location quartier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "direction quartier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "residence quartier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "complete address quartier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "entire address quartier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "whole address quartier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "full contact quartier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Quartier": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "reponsable": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reponsable"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reponsable": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "reponsable.nom": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reponsable",
+			          "ConceptualProperty": "nom"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nom": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "reponsable.prenom": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reponsable",
+			          "ConceptualProperty": "prenom"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "prenom": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "reponsable.mail": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reponsable",
+			          "ConceptualProperty": "mail"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mail": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mailing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "posting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "post-office": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "delivery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "correspondence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "post": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "reponsable.telephone": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reponsable",
+			          "ConceptualProperty": "telephone"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "telephone": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "handset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "receiver": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "phone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mobile": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "reponsable.secteur": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reponsable",
+			          "ConceptualProperty": "secteur"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "secteur": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "reponsable.role": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reponsable",
+			          "ConceptualProperty": "role"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "role": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "person": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "hero": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "heroine": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "protagonist": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "character": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "responsibility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "function": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "job": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "reponsable.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reponsable",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "ville": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ville"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ville": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "ville.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ville",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "ville.nom": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ville",
+			          "ConceptualProperty": "nom"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nom": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "city": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "ville.code_postal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ville",
+			          "ConceptualProperty": "code_postal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "code postal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "code_postal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "postal code": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "id postal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "key postal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "ville.departement": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ville",
+			          "ConceptualProperty": "departement"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "departement": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "county": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "ville.pay": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ville",
+			          "ConceptualProperty": "pays"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pay": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "country": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "salary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "reimbursement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "compensation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "remuneration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "emolument": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "stipend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "wage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "recompense": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "hire": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "famille.liste_familles": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "Liste familles"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "liste familles": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "livraison.prete": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "ConceptualProperty": "prete"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "prete": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "livraison.en_cour": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "ConceptualProperty": "en_cours"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "en cour": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "en_cours": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "livraison.livre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "ConceptualProperty": "livre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "livre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "livraison.etat_livraison": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "livraison",
+			          "ConceptualProperty": "etat_livraison"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "etat livraison": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "etat_livraison": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "famille.nbr_part": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "famille",
+			          "ConceptualProperty": "nbr_part"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nbr part": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nbr_part": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "nbr quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "nbr share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nbr portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nbr fragment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nbr slice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nbr chunk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nbr amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nbr measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nbr cut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nbr segment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "livreur_has_reponsable": {
+			      "Binding": {
+			        "ConceptualEntity": "livreur"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livreur": {
+			          "Target": {
+			            "Entity": "livreur"
+			          }
+			        },
+			        "reponsable": {
+			          "Target": {
+			            "Entity": "reponsable"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livreur"
+			            },
+			            "Object": {
+			              "Role": "reponsable"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livreurs_have_reponsables"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reponsable"
+			            },
+			            "Object": {
+			              "Role": "livreur"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reponsables_have_livreurs"
+			        }
+			      ]
+			    },
+			    "livraison_has_famille": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison": {
+			          "Target": {
+			            "Entity": "livraison"
+			          }
+			        },
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison"
+			            },
+			            "Object": {
+			              "Role": "famille"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livraisons_have_familles"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "livraison"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_livraisons"
+			        }
+			      ]
+			    },
+			    "livraison_has_livreur": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison": {
+			          "Target": {
+			            "Entity": "livraison"
+			          }
+			        },
+			        "livreur": {
+			          "Target": {
+			            "Entity": "livreur"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison"
+			            },
+			            "Object": {
+			              "Role": "livreur"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livraisons_have_livreurs"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livreur"
+			            },
+			            "Object": {
+			              "Role": "livraison"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livreurs_have_livraisons"
+			        }
+			      ]
+			    },
+			    "famille_has_quartier": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "quartier": {
+			          "Target": {
+			            "Entity": "quartier"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "quartier"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_quartiers"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "quartier"
+			            },
+			            "Object": {
+			              "Role": "famille"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartiers_have_familles"
+			        }
+			      ]
+			    },
+			    "famille_has_nbr_part": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.nbr_part": {
+			          "Target": {
+			            "Entity": "famille.nbr_part"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "famille.nbr_part"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_nbr_parts"
+			        }
+			      ]
+			    },
+			    "livraison_has_etat_livraison": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison": {
+			          "Target": {
+			            "Entity": "livraison"
+			          }
+			        },
+			        "livraison.etat_livraison": {
+			          "Target": {
+			            "Entity": "livraison.etat_livraison"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison"
+			            },
+			            "Object": {
+			              "Role": "livraison.etat_livraison"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livraisons_have_etat_livraisons"
+			        }
+			      ]
+			    },
+			    "livraison_has_livre": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison": {
+			          "Target": {
+			            "Entity": "livraison"
+			          }
+			        },
+			        "livraison.livre": {
+			          "Target": {
+			            "Entity": "livraison.livre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison"
+			            },
+			            "Object": {
+			              "Role": "livraison.livre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livraisons_have_livres"
+			        }
+			      ]
+			    },
+			    "livraison_has_en_cour": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison": {
+			          "Target": {
+			            "Entity": "livraison"
+			          }
+			        },
+			        "livraison.en_cour": {
+			          "Target": {
+			            "Entity": "livraison.en_cour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison"
+			            },
+			            "Object": {
+			              "Role": "livraison.en_cour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livraisons_have_en_cours"
+			        }
+			      ]
+			    },
+			    "livraison_has_prete": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison": {
+			          "Target": {
+			            "Entity": "livraison"
+			          }
+			        },
+			        "livraison.prete": {
+			          "Target": {
+			            "Entity": "livraison.prete"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison"
+			            },
+			            "Object": {
+			              "Role": "livraison.prete"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livraisons_have_pretes"
+			        }
+			      ]
+			    },
+			    "famille_has_liste_familles": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.liste_familles": {
+			          "Target": {
+			            "Entity": "famille.liste_familles"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "famille.liste_familles"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_liste_familles"
+			        }
+			      ]
+			    },
+			    "ville_has_pay": {
+			      "Binding": {
+			        "ConceptualEntity": "ville"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ville": {
+			          "Target": {
+			            "Entity": "ville"
+			          }
+			        },
+			        "ville.pay": {
+			          "Target": {
+			            "Entity": "ville.pay"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ville"
+			            },
+			            "Object": {
+			              "Role": "ville.pay"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ville_have_pays"
+			        }
+			      ]
+			    },
+			    "ville_has_departement": {
+			      "Binding": {
+			        "ConceptualEntity": "ville"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ville": {
+			          "Target": {
+			            "Entity": "ville"
+			          }
+			        },
+			        "ville.departement": {
+			          "Target": {
+			            "Entity": "ville.departement"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ville"
+			            },
+			            "Object": {
+			              "Role": "ville.departement"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ville_have_departements"
+			        }
+			      ]
+			    },
+			    "ville_has_code_postal": {
+			      "Binding": {
+			        "ConceptualEntity": "ville"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ville": {
+			          "Target": {
+			            "Entity": "ville"
+			          }
+			        },
+			        "ville.code_postal": {
+			          "Target": {
+			            "Entity": "ville.code_postal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ville"
+			            },
+			            "Object": {
+			              "Role": "ville.code_postal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ville_have_code_postal"
+			        }
+			      ]
+			    },
+			    "ville_has_nom": {
+			      "Binding": {
+			        "ConceptualEntity": "ville"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ville": {
+			          "Target": {
+			            "Entity": "ville"
+			          }
+			        },
+			        "ville.nom": {
+			          "Target": {
+			            "Entity": "ville.nom"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ville"
+			            },
+			            "Object": {
+			              "Role": "ville.nom"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ville_have_nom"
+			        }
+			      ]
+			    },
+			    "ville_has_id": {
+			      "Binding": {
+			        "ConceptualEntity": "ville"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ville": {
+			          "Target": {
+			            "Entity": "ville"
+			          }
+			        },
+			        "ville.id": {
+			          "Target": {
+			            "Entity": "ville.id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ville"
+			            },
+			            "Object": {
+			              "Role": "ville.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ville_have_ids"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "ville"
+			            },
+			            "Name": {
+			              "Role": "ville.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ids_are_names_IDs_of_ville"
+			        }
+			      ]
+			    },
+			    "reponsable_has_id": {
+			      "Binding": {
+			        "ConceptualEntity": "reponsable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reponsable": {
+			          "Target": {
+			            "Entity": "reponsable"
+			          }
+			        },
+			        "reponsable.id": {
+			          "Target": {
+			            "Entity": "reponsable.id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reponsable"
+			            },
+			            "Object": {
+			              "Role": "reponsable.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reponsables_have_ids"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "reponsable"
+			            },
+			            "Name": {
+			              "Role": "reponsable.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ids_are_names_IDs_of_reponsables"
+			        }
+			      ]
+			    },
+			    "reponsable_has_role": {
+			      "Binding": {
+			        "ConceptualEntity": "reponsable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reponsable": {
+			          "Target": {
+			            "Entity": "reponsable"
+			          }
+			        },
+			        "reponsable.role": {
+			          "Target": {
+			            "Entity": "reponsable.role"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reponsable"
+			            },
+			            "Object": {
+			              "Role": "reponsable.role"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reponsables_have_roles"
+			        }
+			      ]
+			    },
+			    "reponsable_has_secteur": {
+			      "Binding": {
+			        "ConceptualEntity": "reponsable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reponsable": {
+			          "Target": {
+			            "Entity": "reponsable"
+			          }
+			        },
+			        "reponsable.secteur": {
+			          "Target": {
+			            "Entity": "reponsable.secteur"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reponsable"
+			            },
+			            "Object": {
+			              "Role": "reponsable.secteur"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reponsables_have_secteurs"
+			        }
+			      ]
+			    },
+			    "reponsable_has_telephone": {
+			      "Binding": {
+			        "ConceptualEntity": "reponsable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reponsable": {
+			          "Target": {
+			            "Entity": "reponsable"
+			          }
+			        },
+			        "reponsable.telephone": {
+			          "Target": {
+			            "Entity": "reponsable.telephone"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reponsable"
+			            },
+			            "Object": {
+			              "Role": "reponsable.telephone"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reponsables_have_telephones"
+			        }
+			      ]
+			    },
+			    "reponsable_has_mail": {
+			      "Binding": {
+			        "ConceptualEntity": "reponsable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reponsable": {
+			          "Target": {
+			            "Entity": "reponsable"
+			          }
+			        },
+			        "reponsable.mail": {
+			          "Target": {
+			            "Entity": "reponsable.mail"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reponsable"
+			            },
+			            "Object": {
+			              "Role": "reponsable.mail"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reponsables_have_mails"
+			        }
+			      ]
+			    },
+			    "reponsable_has_prenom": {
+			      "Binding": {
+			        "ConceptualEntity": "reponsable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reponsable": {
+			          "Target": {
+			            "Entity": "reponsable"
+			          }
+			        },
+			        "reponsable.prenom": {
+			          "Target": {
+			            "Entity": "reponsable.prenom"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reponsable"
+			            },
+			            "Object": {
+			              "Role": "reponsable.prenom"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reponsables_have_prenoms"
+			        }
+			      ]
+			    },
+			    "reponsable_has_nom": {
+			      "Binding": {
+			        "ConceptualEntity": "reponsable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reponsable": {
+			          "Target": {
+			            "Entity": "reponsable"
+			          }
+			        },
+			        "reponsable.nom": {
+			          "Target": {
+			            "Entity": "reponsable.nom"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reponsable"
+			            },
+			            "Object": {
+			              "Role": "reponsable.nom"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reponsables_have_nom"
+			        }
+			      ]
+			    },
+			    "quartier_has_full_address_quartier": {
+			      "Binding": {
+			        "ConceptualEntity": "quartier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "quartier": {
+			          "Target": {
+			            "Entity": "quartier"
+			          }
+			        },
+			        "quartier.full_address_quartier": {
+			          "Target": {
+			            "Entity": "quartier.full_address_quartier"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "quartier"
+			            },
+			            "Object": {
+			              "Role": "quartier.full_address_quartier"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartiers_have_full_address_quartiers"
+			        }
+			      ]
+			    },
+			    "quartier_has_logitude": {
+			      "Binding": {
+			        "ConceptualEntity": "quartier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "quartier": {
+			          "Target": {
+			            "Entity": "quartier"
+			          }
+			        },
+			        "quartier.logitude": {
+			          "Target": {
+			            "Entity": "quartier.logitude"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "quartier"
+			            },
+			            "Object": {
+			              "Role": "quartier.logitude"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartiers_have_logitudes"
+			        }
+			      ]
+			    },
+			    "quartier_has_latitude": {
+			      "Binding": {
+			        "ConceptualEntity": "quartier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "quartier": {
+			          "Target": {
+			            "Entity": "quartier"
+			          }
+			        },
+			        "quartier.latitude": {
+			          "Target": {
+			            "Entity": "quartier.latitude"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "quartier"
+			            },
+			            "Object": {
+			              "Role": "quartier.latitude"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartiers_have_latitudes"
+			        }
+			      ]
+			    },
+			    "quartier_has_nom": {
+			      "Binding": {
+			        "ConceptualEntity": "quartier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "quartier": {
+			          "Target": {
+			            "Entity": "quartier"
+			          }
+			        },
+			        "quartier.nom": {
+			          "Target": {
+			            "Entity": "quartier.nom"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "quartier"
+			            },
+			            "Object": {
+			              "Role": "quartier.nom"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartiers_have_nom"
+			        }
+			      ]
+			    },
+			    "quartier_has_id": {
+			      "Binding": {
+			        "ConceptualEntity": "quartier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "quartier": {
+			          "Target": {
+			            "Entity": "quartier"
+			          }
+			        },
+			        "quartier.id": {
+			          "Target": {
+			            "Entity": "quartier.id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "quartier"
+			            },
+			            "Object": {
+			              "Role": "quartier.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartiers_have_ids"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "quartier"
+			            },
+			            "Name": {
+			              "Role": "quartier.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ids_are_names_IDs_of_quartiers"
+			        }
+			      ]
+			    },
+			    "livreur_has_id": {
+			      "Binding": {
+			        "ConceptualEntity": "livreur"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livreur": {
+			          "Target": {
+			            "Entity": "livreur"
+			          }
+			        },
+			        "livreur.id": {
+			          "Target": {
+			            "Entity": "livreur.id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livreur"
+			            },
+			            "Object": {
+			              "Role": "livreur.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livreurs_have_ids"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "livreur"
+			            },
+			            "Name": {
+			              "Role": "livreur.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ids_are_names_IDs_of_livreurs"
+			        }
+			      ]
+			    },
+			    "livreur_has_secteur": {
+			      "Binding": {
+			        "ConceptualEntity": "livreur"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livreur": {
+			          "Target": {
+			            "Entity": "livreur"
+			          }
+			        },
+			        "livreur.secteur": {
+			          "Target": {
+			            "Entity": "livreur.secteur"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livreur"
+			            },
+			            "Object": {
+			              "Role": "livreur.secteur"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livreurs_have_secteurs"
+			        }
+			      ]
+			    },
+			    "livreur_has_type_vehicule": {
+			      "Binding": {
+			        "ConceptualEntity": "livreur"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livreur": {
+			          "Target": {
+			            "Entity": "livreur"
+			          }
+			        },
+			        "livreur.type_vehicule": {
+			          "Target": {
+			            "Entity": "livreur.type_vehicule"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livreur"
+			            },
+			            "Object": {
+			              "Role": "livreur.type_vehicule"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livreurs_have_type_vehicules"
+			        }
+			      ]
+			    },
+			    "livreur_has_telephone": {
+			      "Binding": {
+			        "ConceptualEntity": "livreur"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livreur": {
+			          "Target": {
+			            "Entity": "livreur"
+			          }
+			        },
+			        "livreur.telephone": {
+			          "Target": {
+			            "Entity": "livreur.telephone"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livreur"
+			            },
+			            "Object": {
+			              "Role": "livreur.telephone"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livreurs_have_telephones"
+			        }
+			      ]
+			    },
+			    "livreur_has_mail": {
+			      "Binding": {
+			        "ConceptualEntity": "livreur"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livreur": {
+			          "Target": {
+			            "Entity": "livreur"
+			          }
+			        },
+			        "livreur.mail": {
+			          "Target": {
+			            "Entity": "livreur.mail"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livreur"
+			            },
+			            "Object": {
+			              "Role": "livreur.mail"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livreurs_have_mails"
+			        }
+			      ]
+			    },
+			    "livreur_has_prenom": {
+			      "Binding": {
+			        "ConceptualEntity": "livreur"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livreur": {
+			          "Target": {
+			            "Entity": "livreur"
+			          }
+			        },
+			        "livreur.prenom": {
+			          "Target": {
+			            "Entity": "livreur.prenom"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livreur"
+			            },
+			            "Object": {
+			              "Role": "livreur.prenom"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livreurs_have_prenoms"
+			        }
+			      ]
+			    },
+			    "livreur_has_nom": {
+			      "Binding": {
+			        "ConceptualEntity": "livreur"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livreur": {
+			          "Target": {
+			            "Entity": "livreur"
+			          }
+			        },
+			        "livreur.nom": {
+			          "Target": {
+			            "Entity": "livreur.nom"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livreur"
+			            },
+			            "Object": {
+			              "Role": "livreur.nom"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livreurs_have_nom"
+			        }
+			      ]
+			    },
+			    "livraison_has_avec_enfant": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison": {
+			          "Target": {
+			            "Entity": "livraison"
+			          }
+			        },
+			        "livraison.avec_enfant": {
+			          "Target": {
+			            "Entity": "livraison.avec_enfant"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison"
+			            },
+			            "Object": {
+			              "Role": "livraison.avec_enfant"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livraisons_have_avec_enfant"
+			        }
+			      ]
+			    },
+			    "livraison_has_nombre_part": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison": {
+			          "Target": {
+			            "Entity": "livraison"
+			          }
+			        },
+			        "livraison.nombre_part": {
+			          "Target": {
+			            "Entity": "livraison.nombre_part"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison"
+			            },
+			            "Object": {
+			              "Role": "livraison.nombre_part"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livraisons_have_nombre_parts"
+			        }
+			      ]
+			    },
+			    "livraison_has_occasion": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison": {
+			          "Target": {
+			            "Entity": "livraison"
+			          }
+			        },
+			        "livraison.occasion": {
+			          "Target": {
+			            "Entity": "livraison.occasion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison"
+			            },
+			            "Object": {
+			              "Role": "livraison.occasion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livraisons_have_occasions"
+			        }
+			      ]
+			    },
+			    "livraison_has_date_livraison": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison": {
+			          "Target": {
+			            "Entity": "livraison"
+			          }
+			        },
+			        "livraison.date_livraison": {
+			          "Target": {
+			            "Entity": "livraison.date_livraison"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison"
+			            },
+			            "Object": {
+			              "Role": "livraison.date_livraison"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "livraisons_have_date_livraisons"
+			        }
+			      ]
+			    },
+			    "famille_has_full_address": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.full_address": {
+			          "Target": {
+			            "Entity": "famille.full_address"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "famille.full_address"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_full_addresses"
+			        }
+			      ]
+			    },
+			    "famille_has_tel__bis": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.tel__bis": {
+			          "Target": {
+			            "Entity": "famille.tel__bis"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "famille.tel__bis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_tel__bises"
+			        }
+			      ]
+			    },
+			    "famille_has_tel": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.tel": {
+			          "Target": {
+			            "Entity": "famille.tel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "famille.tel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_tel"
+			        }
+			      ]
+			    },
+			    "famille_has_se_deplace": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.se_deplace": {
+			          "Target": {
+			            "Entity": "famille.se_deplace"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "famille.se_deplace"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_se_deplaces"
+			        }
+			      ]
+			    },
+			    "famille_has_adresse": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.adresse": {
+			          "Target": {
+			            "Entity": "famille.adresse"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "famille.adresse"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_adresses"
+			        }
+			      ]
+			    },
+			    "famille_has_nombre_enfant": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.nombre_enfant": {
+			          "Target": {
+			            "Entity": "famille.nombre_enfant"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "famille.nombre_enfant"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_nombre_enfant"
+			        }
+			      ]
+			    },
+			    "famille_has_nombre_adulte": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.nombre_adulte": {
+			          "Target": {
+			            "Entity": "famille.nombre_adulte"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "famille.nombre_adulte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_nombre_adultes"
+			        }
+			      ]
+			    },
+			    "famille_has_sadaqa": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.sadaqa": {
+			          "Target": {
+			            "Entity": "famille.sadaqa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "famille.sadaqa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_sadaqas"
+			        }
+			      ]
+			    },
+			    "famille_has_zakat_el_fitr": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.zakat_el_fitr": {
+			          "Target": {
+			            "Entity": "famille.zakat_el_fitr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "famille.zakat_el_fitr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_zakat_el_fitrs"
+			        }
+			      ]
+			    },
+			    "famille_has_prenom_contact": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.prenom_contact": {
+			          "Target": {
+			            "Entity": "famille.prenom_contact"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "famille.prenom_contact"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_prenom_contacts"
+			        }
+			      ]
+			    },
+			    "famille_has_nom": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.nom": {
+			          "Target": {
+			            "Entity": "famille.nom"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "famille.nom"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_nom"
+			        }
+			      ]
+			    },
+			    "famille_has_id": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.id": {
+			          "Target": {
+			            "Entity": "famille.id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Object": {
+			              "Role": "famille.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_have_ids"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Name": {
+			              "Role": "famille.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ids_are_names_IDs_of_familles"
+			        }
+			      ]
+			    },
+			    "ville_in_pay": {
+			      "Binding": {
+			        "ConceptualEntity": "ville"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ville": {
+			          "Target": {
+			            "Entity": "ville"
+			          }
+			        },
+			        "ville.pay": {
+			          "Target": {
+			            "Entity": "ville.pay"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "ville.pay"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "ville"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "ville.pay"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ville_are_in_pays"
+			        }
+			      ]
+			    },
+			    "ville_in_departement": {
+			      "Binding": {
+			        "ConceptualEntity": "ville"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ville": {
+			          "Target": {
+			            "Entity": "ville"
+			          }
+			        },
+			        "ville.departement": {
+			          "Target": {
+			            "Entity": "ville.departement"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "ville.departement"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "ville"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "ville.departement"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ville_are_in_departements"
+			        }
+			      ]
+			    },
+			    "ville_in_nom": {
+			      "Binding": {
+			        "ConceptualEntity": "ville"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ville": {
+			          "Target": {
+			            "Entity": "ville"
+			          }
+			        },
+			        "ville.nom": {
+			          "Target": {
+			            "Entity": "ville.nom"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "ville.nom"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "ville"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "ville.nom"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ville_are_in_nom"
+			        }
+			      ]
+			    },
+			    "quartier_in_full_address_quartier": {
+			      "Binding": {
+			        "ConceptualEntity": "quartier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "quartier": {
+			          "Target": {
+			            "Entity": "quartier"
+			          }
+			        },
+			        "quartier.full_address_quartier": {
+			          "Target": {
+			            "Entity": "quartier.full_address_quartier"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "quartier.full_address_quartier"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "quartier"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "quartier.full_address_quartier"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartiers_are_in_full_address_quartiers"
+			        }
+			      ]
+			    },
+			    "famille_in_full_address": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.full_address": {
+			          "Target": {
+			            "Entity": "famille.full_address"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "famille.full_address"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "famille.full_address"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_are_in_full_addresses"
+			        }
+			      ]
+			    },
+			    "famille_in_adresse": {
+			      "Binding": {
+			        "ConceptualEntity": "famille"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "famille": {
+			          "Target": {
+			            "Entity": "famille"
+			          }
+			        },
+			        "famille.adresse": {
+			          "Target": {
+			            "Entity": "famille.adresse"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "famille.adresse"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "famille"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "famille.adresse"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "familles_are_in_adresses"
+			        }
+			      ]
+			    },
+			    "quartier_has_ville": {
+			      "Binding": {
+			        "ConceptualEntity": "quartier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "quartier": {
+			          "Target": {
+			            "Entity": "quartier"
+			          }
+			        },
+			        "ville": {
+			          "Target": {
+			            "Entity": "ville"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "quartier"
+			            },
+			            "Object": {
+			              "Role": "ville"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartiers_have_ville"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ville"
+			            },
+			            "Object": {
+			              "Role": "quartier"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ville_have_quartiers"
+			        }
+			      ]
+			    },
+			    "livraison_date_livraison_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison.date_livraison": {
+			          "Target": {
+			            "Entity": "livraison.date_livraison"
+			          }
+			        },
+			        "livraison.date_livraison.date_hierarchy": {
+			          "Target": {
+			            "Entity": "livraison.date_livraison.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison.date_livraison"
+			            },
+			            "Object": {
+			              "Role": "livraison.date_livraison.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_livraisons_have_date_hierarchy_livraisons"
+			        }
+			      ]
+			    },
+			    "livraison_date_livraison_date_hierarchy_has_livraison_date_livraison_year": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison.date_livraison.date_hierarchy": {
+			          "Target": {
+			            "Entity": "livraison.date_livraison.date_hierarchy"
+			          }
+			        },
+			        "livraison.date_livraison.year": {
+			          "Target": {
+			            "Entity": "livraison.date_livraison.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison.date_livraison.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "livraison.date_livraison.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchy_livraisons_have_year_livraisons"
+			        }
+			      ]
+			    },
+			    "livraison_date_livraison_date_hierarchy_has_livraison_date_livraison_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison.date_livraison.date_hierarchy": {
+			          "Target": {
+			            "Entity": "livraison.date_livraison.date_hierarchy"
+			          }
+			        },
+			        "livraison.date_livraison.quarter": {
+			          "Target": {
+			            "Entity": "livraison.date_livraison.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison.date_livraison.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "livraison.date_livraison.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchy_livraisons_have_quarter_livraisons"
+			        }
+			      ]
+			    },
+			    "livraison_date_livraison_date_hierarchy_has_livraison_date_livraison_month": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison.date_livraison.date_hierarchy": {
+			          "Target": {
+			            "Entity": "livraison.date_livraison.date_hierarchy"
+			          }
+			        },
+			        "livraison.date_livraison.month": {
+			          "Target": {
+			            "Entity": "livraison.date_livraison.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison.date_livraison.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "livraison.date_livraison.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchy_livraisons_have_month_livraisons"
+			        }
+			      ]
+			    },
+			    "livraison_date_livraison_date_hierarchy_has_livraison_date_livraison_day": {
+			      "Binding": {
+			        "ConceptualEntity": "livraison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "livraison.date_livraison.date_hierarchy": {
+			          "Target": {
+			            "Entity": "livraison.date_livraison.date_hierarchy"
+			          }
+			        },
+			        "livraison.date_livraison.day": {
+			          "Target": {
+			            "Entity": "livraison.date_livraison.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "livraison.date_livraison.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "livraison.date_livraison.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchy_livraisons_have_day_livraisons"
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

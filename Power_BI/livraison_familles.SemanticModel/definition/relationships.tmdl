@@ -1,0 +1,26 @@
+relationship f11ccee6-9dfc-4398-957d-55b357e55203
+	joinOnDateBehavior: datePartOnly
+	fromColumn: livraison.date_livraisons
+	toColumn: LocalDateTable_300dfb0d-eedb-46c0-9f36-86c96176e501.Date
+
+relationship AutoDetected_a4c897aa-0857-4db8-8062-420370421e10
+	fromColumn: famille.id_quartier
+	toColumn: quartier.id
+
+relationship fcb1c46e-e273-370b-4220-93d4a6be1c9d
+	fromColumn: quartier.id_ville
+	toColumn: ville.id
+
+relationship AutoDetected_3008a2d2-76ac-43b7-905a-65b7abbaf1ef
+	fromColumn: livraison.id_livreur
+	toColumn: livreur.id
+
+relationship 189f03fe-e909-46fa-7cf9-66a37cec40f1
+	fromColumn: livreur.id_responsable
+	toColumn: reponsable.id
+
+relationship f8d4eef3-a2e5-e0a0-21ba-e40104dcdd55
+	crossFilteringBehavior: bothDirections
+	fromColumn: livraison.id_famille
+	toColumn: famille.id
+

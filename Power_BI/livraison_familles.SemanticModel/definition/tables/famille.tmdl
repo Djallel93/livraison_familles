@@ -1,0 +1,164 @@
+table famille
+	lineageTag: a0f33413-5815-4215-93ee-3627c500b35a
+
+	measure 'Liste familles' = "ID " & CONCATENATEX(famille, famille[id] & " : " & famille[nom], UNICHAR(10) & "ID ")
+		lineageTag: 2a7860d9-9628-4f52-ad38-7529d96bca5d
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f4d9859-4284-4520-9536-e3b480b550ba
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nom
+		dataType: string
+		lineageTag: 4337a450-40fa-426f-ae99-4e0823ae38c5
+		summarizeBy: none
+		sourceColumn: nom
+
+		annotation SummarizationSetBy = Automatic
+
+	column prenom_contact
+		dataType: string
+		lineageTag: a5c12608-b03f-4268-a99f-00bb5196c839
+		summarizeBy: none
+		sourceColumn: prenom_contact
+
+		annotation SummarizationSetBy = Automatic
+
+	column Zakat_el_fitr
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 1dd9cc8a-f0f0-48a2-a062-d6e1efc5b2e5
+		summarizeBy: none
+		sourceColumn: Zakat_el_fitr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sadaqa
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ede506c6-7a45-45b7-a2f2-e65e92126df6
+		summarizeBy: none
+		sourceColumn: Sadaqa
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_adulte
+		dataType: int64
+		formatString: 0
+		lineageTag: 89a8bd9b-07bd-4c62-9e0a-4cd71db0e132
+		summarizeBy: sum
+		sourceColumn: nombre_adulte
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_enfant
+		dataType: int64
+		formatString: 0
+		lineageTag: fe383d0c-134a-40b0-b95d-c47e4d80efc9
+		summarizeBy: sum
+		sourceColumn: nombre_enfant
+
+		annotation SummarizationSetBy = Automatic
+
+	column adresse
+		dataType: string
+		lineageTag: 4d623a3c-35de-4d87-a009-b49506facc9c
+		dataCategory: Address
+		summarizeBy: none
+		sourceColumn: adresse
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_quartier
+		dataType: int64
+		formatString: 0
+		lineageTag: d03adfe7-41ec-4b30-bb77-03f382645b81
+		summarizeBy: none
+		sourceColumn: id_quartier
+
+		annotation SummarizationSetBy = Automatic
+
+	column se_deplace
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7874ed7a-13c3-4cda-a68c-646fc0773d06
+		summarizeBy: none
+		sourceColumn: se_deplace
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tel
+		dataType: string
+		lineageTag: 1bf7eacf-e6d0-4d9c-8144-dfa24e4ca4dc
+		summarizeBy: none
+		sourceColumn: Tel
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tel. bis'
+		dataType: string
+		lineageTag: d7d0ff18-9691-47f7-9233-df058a097114
+		summarizeBy: none
+		sourceColumn: Tel. bis
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Full Address' = famille[adresse] & ", " & RELATED(ville[code_postal]) & " " & RELATED(ville[nom]) & ", " & RELATED(ville[departement]) & ", " & RELATED(ville[pays])
+		lineageTag: 366d5b81-c16d-44b2-8169-9820d41e2c20
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column nbr_part = famille[nombre_adulte] + famille[nombre_enfant]
+		formatString: 0
+		lineageTag: 333eb113-3f86-43f0-9042-7fc2b510d4c8
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Column 18'
+		dataType: string
+		lineageTag: 5cdb0658-054c-464e-a9ba-d17d402eccbe
+		summarizeBy: none
+		sourceColumn: Column 18
+
+		annotation SummarizationSetBy = Automatic
+
+	partition famille = m
+		mode: import
+		source = ```
+				let
+				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1pPshgPXbT2r9MJy1JejTwpvZ_lKZootVlxk35DsG1Zo/edit?usp=sharing"),
+				    famille_Table = Source{[name="famille",ItemKind="Table"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(famille_Table, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"id", Int64.Type}, {"nom", type text}, {"prenom_contact", type text}, {"Zakat_el_fitr", type logical}, {"Sadaqa", type logical}, {"nombre_adulte", Int64.Type}, {"nombre_enfant", Int64.Type}, {"adresse", type text}, {"id_quartier", Int64.Type}, {"se_deplace", type logical}, {"telephone", Int64.Type}, {"telephone_bis", Int64.Type}, {"circonstances", type text}, {"etat", type text}, {"premier_contact", type text}, {"ressentit", type text}, {"specifites", type text}}),
+				    #"Added Custom Column" = Table.AddColumn(#"Changed Type", "Tel", each Text.Combine({"+33 (0) ", Text.Start(Text.From([telephone], "fr-FR"), 1), " ", Text.Middle(Text.From([telephone], "fr-FR"), 1, 2), " ", Text.Middle(Text.From([telephone], "fr-FR"), 3, 2), " ", Text.Middle(Text.From([telephone], "fr-FR"), 5, 2), " ", Text.Middle(Text.From([telephone], "fr-FR"), 7)}), type text),
+				    #"Added Custom Column1" = Table.AddColumn(#"Added Custom Column", "Tel. bis", each 
+				    if [telephone_bis] <> null then 
+				        Text.Combine(
+				            {Text.Start([Tel], 8), 
+				             Text.Start(Text.From([telephone_bis], "fr-FR"), 1), " ", 
+				             Text.Middle(Text.From([telephone_bis], "fr-FR"), 1, 2), " ", 
+				             Text.Middle(Text.From([telephone_bis], "fr-FR"), 3, 2), " ", 
+				             Text.Middle(Text.From([telephone_bis], "fr-FR"), 5, 2), " ", 
+				             Text.Middle(Text.From([telephone_bis], "fr-FR"), 7)}, 
+				        "")
+				    else 
+				        null,
+				    type text
+				),
+				    #"Removed Columns" = Table.RemoveColumns(#"Added Custom Column1",{"circonstances", "etat", "premier_contact", "ressentit", "specifites", "telephone", "telephone_bis"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Columns", each ([adresse] <> ""))
+				in
+				    #"Filtered Rows"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

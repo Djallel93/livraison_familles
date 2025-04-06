@@ -1,0 +1,157 @@
+{
+  "config": "{\"version\":\"5.61\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.61\",\"type\":2}},\"activeSectionIndex\":2,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "filters": "[{\"name\":\"39438047ed1c260ea522\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"famille\"}},\"Property\":\"Zakat_el_fitr\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"famille\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Zakat_el_fitr\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"true\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}},{\"name\":\"ebd5b470305a98a01011\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"date_livraisons\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}},{\"name\":\"efa4aed306647d8cb01c\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"id_livreur\"}},\"type\":\"Categorical\",\"howCreated\":1}]",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "9db1a6c1b122bc1d5645",
+      "config": "{}",
+      "name": "26b99c0fcac04625568c",
+      "parameters": "[{\"name\":\"a790cc35e6d184391dce\",\"boundFilter\":\"2b929dbe10db95323249\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"quartier\"}},\"Property\":\"Full Address Quartier\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "4b6c9de0550b6a0ad376",
+      "config": "{}",
+      "name": "295ad15e99b577080604",
+      "parameters": "[{\"name\":\"a790cc35e6d184391dce\",\"boundFilter\":\"2b929dbe10db95323249\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"quartier\"}},\"Property\":\"Full Address Quartier\"}}}]"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Villes",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"accc5ed72c20d050d18e\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"famille\"}},\"Property\":\"se_deplace\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"famille\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"se_deplace\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"false\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+      "height": 720.00,
+      "name": "28a03def443247926200",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"6b9f51b679a708bd79e0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":720,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"ville.nom\"},{\"queryRef\":\"quartier.Full Address Quartier\",\"active\":true}],\"Size\":[{\"queryRef\":\"Sum(livraison.nombre_part)\"}],\"Y\":[{\"queryRef\":\"Avg(quartier.latitude)\"}],\"X\":[{\"queryRef\":\"Avg(quartier.logitude)\"}],\"Tooltips\":[{\"queryRef\":\"famille.Liste familles\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"quartier\",\"Type\":0},{\"Name\":\"l\",\"Entity\":\"livraison\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"famille\",\"Type\":0},{\"Name\":\"v\",\"Entity\":\"ville\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Full Address Quartier\"},\"Name\":\"quartier.Full Address Quartier\",\"NativeReferenceName\":\"Quartier\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"nombre_part\"}},\"Function\":0},\"Name\":\"Sum(livraison.nombre_part)\",\"NativeReferenceName\":\"Nombre de parts\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"latitude\"}},\"Function\":1},\"Name\":\"Avg(quartier.latitude)\",\"NativeReferenceName\":\"Latitude\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"logitude\"}},\"Function\":1},\"Name\":\"Avg(quartier.logitude)\",\"NativeReferenceName\":\"Logitude\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Liste familles\"},\"Name\":\"famille.Liste familles\",\"NativeReferenceName\":\"Liste familles\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"nom\"},\"Name\":\"ville.nom\",\"NativeReferenceName\":\"nom\"}]},\"columnProperties\":{\"Avg(quartier.latitude)\":{\"displayName\":\"Latitude\"},\"Avg(quartier.logitude)\":{\"displayName\":\"Logitude\"},\"Sum(livraison.nombre_part)\":{\"displayName\":\"Nombre de parts\"},\"quartier.Full Address Quartier\":{\"displayName\":\"Quartier\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"25D\"}}}},\"Value\":{\"Literal\":{\"Value\":\"'#D0002D'\"}}},{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"15D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":4,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"25D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#F47200'\"}}},{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"7D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":4,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"15D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#EFC503'\"}}},{\"Condition\":{\"Comparison\":{\"ComparisonKind\":4,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"7D\"}}}},\"Value\":{\"Literal\":{\"Value\":\"'#00B01D'\"}}}]}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}],\"mapControls\":[{\"properties\":{\"showZoomButtons\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"geocodingCulture\":{\"expr\":{\"Literal\":{\"Value\":\"'fr-FR'\"}}}}}],\"mapStyles\":[{\"properties\":{\"mapTheme\":{\"expr\":{\"Literal\":{\"Value\":\"'road'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"type\":0}",
+      "displayName": "Etat livraison",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"2b929dbe10db95323249\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"quartier\"}},\"Property\":\"Full Address Quartier\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"098d6cd7d442831163ec\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"date_livraisons\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}},{\"name\":\"8d53afb677320ebeca0b\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"quartier\"}},\"Property\":\"id\"}},\"type\":\"Advanced\",\"howCreated\":1}]",
+      "height": 720.00,
+      "name": "4b6c9de0550b6a0ad376",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"203cbccd907b92bb95e4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":402.2944893225626,\"y\":20.96648804286971,\"z\":1000,\"width\":851.763576741582,\"height\":108.76365672238663,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"livraison.etat_livraison\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"livraison\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"etat_livraison\"},\"Name\":\"livraison.etat_livraison\",\"NativeReferenceName\":\"etat_livraison\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"livraison\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"etat_livraison\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'4 - Livrée'\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"shapeCustomRectangle\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRoundedByPixel'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"18L\"}}}},\"selector\":{\"id\":\"default\"}}],\"layout\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"style\":{\"expr\":{\"Literal\":{\"Value\":\"'Cards'\"}}},\"rowCount\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"columnCount\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}},\"cellPadding\":{\"expr\":{\"Literal\":{\"Value\":\"21L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"accentBar\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"width\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 108.76,
+          "width": 851.76,
+          "x": 402.29,
+          "y": 20.97,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"d3a4f50840d05405d37b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.724866032152283,\"y\":20.96648804286971,\"z\":2000,\"width\":361.67191873950253,\"height\":108.76365672238663,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"livraison.filtre_temp\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"livraison\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"filtre_temp\"},\"Name\":\"livraison.filtre_temp\",\"NativeReferenceName\":\"filtre_temp\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 108.76,
+          "width": 361.67,
+          "x": 15.72,
+          "y": 20.97,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"fc159bff70b038520438\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.855855855855856,\"y\":175.85585585585585,\"z\":0,\"width\":1248.2882882882884,\"height\":527.5675675675676,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Tooltips\":[{\"queryRef\":\"Min(livraison.etat_livraison)\"},{\"queryRef\":\"famille.Liste familles\"}],\"Category\":[{\"queryRef\":\"famille.Full Address\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"livraison\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"famille\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"etat_livraison\"}},\"Function\":3},\"Name\":\"Min(livraison.etat_livraison)\",\"NativeReferenceName\":\"Etat Livraison\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Full Address\"},\"Name\":\"famille.Full Address\",\"NativeReferenceName\":\"Full Address\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Liste familles\"},\"Name\":\"famille.Liste familles\",\"NativeReferenceName\":\"Liste familles\"}]},\"columnProperties\":{\"Min(livraison.etat_livraison)\":{\"displayName\":\"Etat Livraison\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"etat_livraison\"}},\"Function\":3}},\"Right\":{\"Literal\":{\"Value\":\"'4 - Livrée'\"}}},\"Annotations\":{\"PowerBI.SQExprEvaluationKind\":1,\"PowerBI.SQExprTextOperatorOption\":2}},\"Value\":{\"Literal\":{\"Value\":\"'#00FF00'\"}}},{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"etat_livraison\"}},\"Function\":3}},\"Right\":{\"Literal\":{\"Value\":\"'3 - En cours de livraison'\"}}},\"Annotations\":{\"PowerBI.SQExprEvaluationKind\":1,\"PowerBI.SQExprTextOperatorOption\":2}},\"Value\":{\"Literal\":{\"Value\":\"'#FFEE00'\"}}},{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"etat_livraison\"}},\"Function\":3}},\"Right\":{\"Literal\":{\"Value\":\"'2 - Prête à être livrée'\"}}},\"Annotations\":{\"PowerBI.SQExprEvaluationKind\":1,\"PowerBI.SQExprTextOperatorOption\":2}},\"Value\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}},{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"etat_livraison\"}},\"Function\":3}},\"Right\":{\"Literal\":{\"Value\":\"'1 - Non préparé'\"}}},\"Annotations\":{\"PowerBI.SQExprEvaluationKind\":1,\"PowerBI.SQExprTextOperatorOption\":2}},\"Value\":{\"Literal\":{\"Value\":\"'#FF0000'\"}}}]}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 527.57,
+          "width": 1248.29,
+          "x": 15.86,
+          "y": 175.86,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Duplicate of Villes",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"accc5ed72c20d050d18e\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"famille\"}},\"Property\":\"se_deplace\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"famille\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"se_deplace\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"false\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+      "height": 720.00,
+      "name": "6eed44e2053d57205a77",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"bbce6864bd93d1cec20b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":720,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"ville.nom\"},{\"queryRef\":\"quartier.Full Address Quartier\",\"active\":true}],\"Size\":[{\"queryRef\":\"Sum(livraison.nombre_part)\"}],\"Y\":[{\"queryRef\":\"Avg(quartier.latitude)\"}],\"X\":[{\"queryRef\":\"Avg(quartier.logitude)\"}],\"Tooltips\":[{\"queryRef\":\"famille.Liste familles\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"quartier\",\"Type\":0},{\"Name\":\"l\",\"Entity\":\"livraison\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"famille\",\"Type\":0},{\"Name\":\"v\",\"Entity\":\"ville\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Full Address Quartier\"},\"Name\":\"quartier.Full Address Quartier\",\"NativeReferenceName\":\"Quartier\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"nombre_part\"}},\"Function\":0},\"Name\":\"Sum(livraison.nombre_part)\",\"NativeReferenceName\":\"Nombre de parts\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"latitude\"}},\"Function\":1},\"Name\":\"Avg(quartier.latitude)\",\"NativeReferenceName\":\"Latitude\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"logitude\"}},\"Function\":1},\"Name\":\"Avg(quartier.logitude)\",\"NativeReferenceName\":\"Logitude\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Liste familles\"},\"Name\":\"famille.Liste familles\",\"NativeReferenceName\":\"Liste familles\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"nom\"},\"Name\":\"ville.nom\",\"NativeReferenceName\":\"nom\"}]},\"columnProperties\":{\"Avg(quartier.latitude)\":{\"displayName\":\"Latitude\"},\"Avg(quartier.logitude)\":{\"displayName\":\"Logitude\"},\"Sum(livraison.nombre_part)\":{\"displayName\":\"Nombre de parts\"},\"quartier.Full Address Quartier\":{\"displayName\":\"Quartier\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"25D\"}}}},\"Value\":{\"Literal\":{\"Value\":\"'#D0002D'\"}}},{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"15D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":4,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"25D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#F47200'\"}}},{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"7D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":4,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"15D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#EFC503'\"}}},{\"Condition\":{\"Comparison\":{\"ComparisonKind\":4,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"7D\"}}}},\"Value\":{\"Literal\":{\"Value\":\"'#00B01D'\"}}}]}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}],\"mapControls\":[{\"properties\":{\"showZoomButtons\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"geocodingCulture\":{\"expr\":{\"Literal\":{\"Value\":\"'fr-FR'\"}}}}}],\"mapStyles\":[{\"properties\":{\"mapTheme\":{\"expr\":{\"Literal\":{\"Value\":\"'road'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"type\":2}",
+      "displayName": "Quartier",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"2b929dbe10db95323249\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"quartier\"}},\"Property\":\"Full Address Quartier\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"quartier\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Full Address Quartier\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Les Bouillons, Saint-Brevin-les-Pins, Loire-Atlantique, France'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "9db1a6c1b122bc1d5645",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"8eb9cf8093da61cc018e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"bf881277d000aa228010\",\"layouts\":[{\"id\":0,\"position\":{\"x\":30.526315789473685,\"y\":140,\"z\":0,\"width\":1217.8947368421054,\"height\":563.1578947368421,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Size\":[{\"queryRef\":\"Sum(livraison.nombre_part)\"}],\"Category\":[{\"queryRef\":\"famille.Full Address\",\"active\":true}],\"Tooltips\":[{\"queryRef\":\"famille.Liste familles\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"famille\",\"Type\":0},{\"Name\":\"l\",\"Entity\":\"livraison\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"nombre_part\"}},\"Function\":0},\"Name\":\"Sum(livraison.nombre_part)\",\"NativeReferenceName\":\"Nombre de part\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Full Address\"},\"Name\":\"famille.Full Address\",\"NativeReferenceName\":\"Full Address\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Liste familles\"},\"Name\":\"famille.Liste familles\",\"NativeReferenceName\":\"Liste familles\"}]},\"columnProperties\":{\"Sum(livraison.nombre_part)\":{\"displayName\":\"Nombre de part\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"21D\"}}}},\"Value\":{\"Literal\":{\"Value\":\"'#FA0000'\"}}},{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"15D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"21D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#FFA600'\"}}},{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"7D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"15D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#FFFF00'\"}}},{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"livraison\"}},\"Property\":\"nombre_part\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"7D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#00FA00'\"}}}]}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 563.16,
+          "width": 1217.89,
+          "x": 30.53,
+          "y": 140.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c39b78bbe694c722a70d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":196.03603603603605,\"y\":20.18018018018018,\"z\":2000,\"width\":889.3693693693695,\"height\":102.34234234234235,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(quartier.nom)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"quartier\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"nom\"}},\"Function\":3},\"Name\":\"Min(quartier.nom)\",\"NativeReferenceName\":\"First nom\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 102.34,
+          "width": 889.37,
+          "x": 196.04,
+          "y": 20.18,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

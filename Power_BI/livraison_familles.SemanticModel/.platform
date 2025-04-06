@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "livraison_familles"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "892e773e-5c55-4bd6-9324-77e32a076b35"
+  }
+}
