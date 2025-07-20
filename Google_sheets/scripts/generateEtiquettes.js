@@ -1,7 +1,6 @@
 function generateEtiquettes() {
     // Ouvre le classeur actif et les feuilles
     var sourceSheet = SpreadsheetApp.getActiveSpreadsheet();
-    const livraisonSheet = getSheetByName(SHEET_DEF.LIVRAISON.SHEET_NAME);
     var livraisonData = getSheetDataByName(SHEET_DEF.LIVRAISON.SHEET_NAME);
     var targetSheet = sourceSheet.getSheetByName("Etiquettes");
 

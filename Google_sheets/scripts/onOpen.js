@@ -61,3 +61,29 @@ function showNotificationDialog(action) {
 
     ui.showModalDialog(htmlOutput, "Sélectionnez une occasion et une date");
 }
+
+
+// TODO: Manual function to process all existing submissions (optional)
+
+/*
+function processAllSubmissions() {
+    try {
+        const sheet = SpreadsheetApp.getActiveSheet();
+        const data = sheet.getDataRange().getValues();
+        const rows = data.slice(1); // Skip header row
+
+        rows.forEach((row, index) => {
+            try {
+                console.log(`Processing row ${index + 2}...`);
+                processFormSubmission(row);
+            } catch (error) {
+                console.error(`Error processing row ${index + 2}:`, error);
+            }
+        });
+
+        console.log(`Processed ${rows.length} submissions`);
+    } catch (error) {
+        console.error('Error in processAllSubmissions:', error);
+    }
+}
+*/

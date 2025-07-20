@@ -90,9 +90,30 @@ const SHEET_DEF = {
       OCCASION: { INDEX: 2, TYPE: "string" },
       LIVREURE: { INDEX: 2, TYPE: "string" },
     }
-  }
+  },
+  QUESTIONS_FORM: {
+    HORODATEUR: "Horodateur",
+    EMAIL: "Adresse e-mail",
+    PROTECTION_DONNEES: "Protection des données personnelles",
+    NOM: "Nom de famille",
+    PRENOM: "Prénom de la personne à contacter",
+    NUM_TEL: "Numéro de téléphone de la personne à contacter",
+    HEBERGE: "Êtes-vous actuellement hébergé(e) par une personne ou une organisation ?",
+    HEBERGE_PAR: "Par qui êtes-vous hébergé(e) ?",
+    ADRESSE: "Adresse",
+    NBR_ADULTES: "Combien d'adultes vivent actuellement dans votre foyer ?",
+    NBR_ENFANTS: "Combien d'enfants vivent actuellement dans votre foyer ?",
+    DESCRIPTION_SITUATION: "Décrivez brièvement votre situation actuelle",
+    PIECE_IDENTITE_TYPE: "Type de pièce d'identité",
+    PIECE_IDENTITE_JUSTIFICATIF: "Justificatif d’identité ou de résidence",
+    ATTESTATION_CAF: "Attestation de la CAF (paiement et/ou quotient familial)",
+    TRAVAIL: "Travaillez-vous actuellement, vous ou votre conjoint(e) ?",
+    TRAVAIL_NBR_JOUR: "Combien de jours par semaine travaillez-vous ?",
+    TRAVAIL_SECTEUR: "Dans quel secteur travaillez-vous ?",
+    AUTRES_AIDES: "Percevez-vous actuellement des aides d'autres organismes ?",
+    AUTRES_AIDES_JUSTIFICATIF: "Veuillez soumettre tous justificatif de ressources",
+  },
 }
-
 
 function getSheetByName(sheetName) {
   return SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetName.trim());
@@ -119,4 +140,8 @@ function getRealColumnIndex(sheetName, columnName) {
 
 function getColumnType(sheetName, columnName) {
   return SHEET_DEF[sheetName.trim()].COLUMNS[columnName.trim()].TYPE;
+}
+
+function getFormQuestion(namedValues, question) {
+  return namedValues[question][0];
 }
