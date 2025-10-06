@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 450px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        h5 {
+            color: #4CAF50;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .input-field label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .btn {
+            width: 100%;
+            margin-top: 20px;
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            border-radius: 6px;
+            text-transform: none;
+            font-size: 16px;
+            padding: 12px 0;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+        }
+
+        #livreurField {
+            display: none;
+        }
+
+        .info-box {
+            background: #E8F5E9;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .info-box p {
+            margin: 0;
+            font-size: 13px;
+            color: #2E7D32;
+        }
+
+        select {
+            display: block !important;
+        }
+
+        .input-field input[type=date],
+        .input-field input[type=text],
+        .input-field input[type=number] {
+            border-bottom: 1px solid #9e9e9e;
+        }
+
+        .input-field input:focus {
+            border-bottom: 1px solid #4CAF50 !important;
+            box-shadow: 0 1px 0 0 #4CAF50 !important;
+        }
+
+        .loader {
+            display: none;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h5>🚚
+            <?= getTitleFromAction(action) ?>
+        </h5>
+
+        <div class="info-box">
+            <p>
+                <?= getInfoFromAction(action) ?>
+            </p>
+        </div>
+
+        <input type="hidden" id="actionType" value="<?= action ?>">
+
+        <!-- Occasion Selection -->
+        <div class="input-field">
+            <select id="occasionSelect">
+                <? for (var i = 0; i < occasions.length; i++) { ?>
+                <option value="<?= occasions[i] ?>" <?=i===0 ? 'selected' : '' ?>>
+                    <?= occasions[i] ?>
+                </option>
+                <? } ?>
+            </select>
+            <label>Occasion</label>
+        </div>
+
+        <!-- Date Selection -->
+        <div class="input-field">
+            <input type="date" id="dateLivraison" required>
+            <label for="dateLivraison">Date de livraison</label>
+        </div>
+
+        <!-- Livreur ID Field (conditionally shown) -->
+        <div id="livreurField" class="input-field">
+            <input type="number" id="livreurId" min="1">
+            <label for="livreurId">ID du livreur</label>
+        </div>
+
+        <!-- Max Families Field (for assignment only) -->
+        <div id="maxFamiliesField" class="input-field" style="display:none;">
+            <input type="number" id="maxFamilies" min="1" max="20" value="10">
+            <label for="maxFamilies">Max de familles par livreur</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn waves-effect waves-light" onclick="handleSubmit()">
+            <i class="material-icons left">check</i>
+            Valider
+        </button>
+
+        <div class="loader">
+            <div class="preloader-wrapper small active">
+                <div class="spinner-layer spinner-green-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Traitement en cours...</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize form selects
+            M.FormSelect.init(document.querySelectorAll('select'));
+            M.updateTextFields();
+
+            // Set default date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('dateLivraison').value = today;
+
+            // Show/hide fields based on action type
+            const actionType = document.getElementById('actionType').value;
+            const livreurField = document.getElementById('livreurField');
+            const maxFamiliesField = document.getElementById('maxFamiliesField');
+
+            if (actionType === 'notify' || actionType === 'generate' || actionType === 'routeMap') {
+                livreurField.style.display = 'block';
+            }
+
+            if (actionType === 'assign') {
+                maxFamiliesField.style.display = 'block';
+            }
+        });
+
+        function handleSubmit() {
+            const action = document.getElementById("actionType").value;
+            const occasion = document.getElementById("occasionSelect").value;
+            const dateLivraison = document.getElementById("dateLivraison").value;
+            const livreurId = document.getElementById("livreurId") ? document.getElementById("livreurId").value : '';
+            const maxFamilies = document.getElementById("maxFamilies") ? document.getElementById("maxFamilies").value : '';
+
+            // Validation
+            if (!occasion || !dateLivraison) {
+                M.toast({ html: "Veuillez remplir tous les champs", classes: "red" });
+                return;
+            }
+
+            // Additional validation for actions requiring livreur ID
+            if ((action === "notify" || action === "generate" || action === "routeMap") && !livreurId) {
+                M.toast({ html: "Veuillez saisir l'ID du livreur", classes: "red" });
+                return;
+            }
+
+            // Show loader
+            document.querySelector('.loader').style.display = 'block';
+            document.querySelector('.btn').disabled = true;
+
+            // Call appropriate function based on action
+            try {
+                switch (action) {
+                    case "notifyAll":
+                        google.script.run
+                            .withSuccessHandler(onSuccess)
+                            .withFailureHandler(onFailure)
+                            .notifyAllLivreurs(occasion, dateLivraison);
+                        break;
+                    case "notify":
+                        google.script.run
+                            .withSuccessHandler(onSuccess)
+                            .withFailureHandler(onFailure)
+                            .notifyLivreur(livreurId, occasion, dateLivraison);
+                        break;
+                    case "generateAll":
+                        google.script.run
+                            .withSuccessHandler(onSuccess)
+                            .withFailureHandler(onFailure)
+                            .generateAllDeliveryDoc(occasion, dateLivraison);
+                        break;
+                    case "generate":
+                        google.script.run
+                            .withSuccessHandler(onSuccess)
+                            .withFailureHandler(onFailure)
+                            .generateDeliveryDoc(livreurId, occasion, dateLivraison);
+                        break;
+                    case "assign":
+                        google.script.run
+                            .withSuccessHandler(onSuccess)
+                            .withFailureHandler(onFailure)
+                            .assignDeliveriesAuto(occasion, dateLivraison, maxFamilies);
+                        break;
+                    case "dashboard":
+                        google.script.run
+                            .withSuccessHandler(onSuccess)
+                            .withFailureHandler(onFailure)
+                            .generateDashboard(occasion, dateLivraison);
+                        break;
+                    case "routeMap":
+                        google.script.run
+                            .withSuccessHandler(onSuccess)
+                            .withFailureHandler(onFailure)
+                            .generateRouteMapForDriver(livreurId, occasion, dateLivraison);
+                        break;
+                    case "adminReport":
+                        google.script.run
+                            .withSuccessHandler(onSuccess)
+                            .withFailureHandler(onFailure)
+                            .sendAdminReportManual(occasion, dateLivraison);
+                        break;
+                    default:
+                        M.toast({ html: "Action inconnue", classes: "red" });
+                        return;
+                }
+            } catch (error) {
+                onFailure(error);
+            }
+        }
+
+        function onSuccess(result) {
+            M.toast({ html: "✅ Opération réussie !", classes: "green" });
+            setTimeout(() => {
+                google.script.host.close();
+            }, 1500);
+        }
+
+        function onFailure(error) {
+            document.querySelector('.loader').style.display = 'none';
+            document.querySelector('.btn').disabled = false;
+            M.toast({ html: "❌ Erreur : " + error.message, classes: "red", displayLength: 4000 });
+        }
+    </script>
+</body>
+
+</html>
+
+<?!
+    function getTitleFromAction(action) {
+        const titles = {
+            notify: 'Notifier un livreur',
+            notifyAll: 'Notifier tous les livreurs',
+            generate: 'Générer une fiche',
+            generateAll: 'Générer toutes les fiches',
+            assign: 'Assigner les livraisons',
+            dashboard: 'Générer le tableau de bord',
+            routeMap: 'Générer un itinéraire',
+            adminReport: 'Envoyer un rapport'
+        };
+        return titles[action] || 'Action';
+    }
+
+    function getInfoFromAction(action) {
+        const info = {
+            notify: 'Envoyez un email de notification à un livreur spécifique',
+            notifyAll: 'Envoyez des emails à tous les livreurs assignés',
+            generate: 'Créez une fiche de livraison pour un livreur',
+            generateAll: 'Créez toutes les fiches de livraison',
+            assign: 'Assignez automatiquement les familles aux livreurs',
+            dashboard: 'Générez un tableau de bord complet',
+            routeMap: 'Créez un itinéraire optimisé pour un livreur',
+            adminReport: 'Envoyez un rapport aux administrateurs'
+        };
+        return info[action] || 'Sélectionnez les paramètres';
+    }
+?>

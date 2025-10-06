@@ -1,6 +1,14 @@
 {
   "timeZone": "Europe/Paris",
-  "dependencies": {},
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "People",
+        "version": "v1",
+        "serviceId": "peopleapi"
+      }
+    ]
+  },
   "exceptionLogging": "STACKDRIVER",
   "runtimeVersion": "V8",
   "sheets": {},
@@ -16,6 +24,8 @@
     "https://www.googleapis.com/auth/script.send_mail",
     "https://www.googleapis.com/auth/script.container.ui",
     "https://www.googleapis.com/auth/script.external_request",
-    "https://www.googleapis.com/auth/documents"
+    "https://www.googleapis.com/auth/documents",
+    "https://www.googleapis.com/auth/drive",
+    "https://www.googleapis.com/auth/contacts"
   ]
 }
