@@ -4,17 +4,21 @@
     "enabledAdvancedServices": [
       {
         "userSymbol": "People",
-        "version": "v1",
-        "serviceId": "peopleapi"
+        "serviceId": "peopleapi",
+        "version": "v1"
+      },
+      {
+        "userSymbol": "Drive",
+        "serviceId": "drive",
+        "version": "v3"
       }
     ]
   },
-  "exceptionLogging": "STACKDRIVER",
-  "runtimeVersion": "V8",
-  "sheets": {},
-  "executionApi": {
+  "webapp": {
+    "executeAs": "USER_DEPLOYING",
     "access": "ANYONE"
   },
+  "exceptionLogging": "STACKDRIVER",
   "oauthScopes": [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/calendar",
@@ -26,6 +30,12 @@
     "https://www.googleapis.com/auth/script.external_request",
     "https://www.googleapis.com/auth/documents",
     "https://www.googleapis.com/auth/drive",
+    "https://www.googleapis.com/auth/script.scriptapp",
     "https://www.googleapis.com/auth/contacts"
-  ]
+  ],
+  "executionApi": {
+    "access": "ANYONE"
+  },
+  "runtimeVersion": "V8",
+  "sheets": {}
 }

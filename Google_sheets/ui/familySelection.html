@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h5 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .filters {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .family-card {
+            border: 2px solid #e0e0e0;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .family-card:hover {
+            border-color: #4CAF50;
+            background: #f1f8f4;
+        }
+
+        .family-card.selected {
+            border-color: #4CAF50;
+            background: #e8f5e9;
+            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+        }
+
+        .family-card input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .family-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .info-item {
+            font-size: 13px;
+        }
+
+        .info-item .label {
+            font-weight: 600;
+            color: #666;
+        }
+
+        .stats-bar {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1976d2;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+
+        .badge-children {
+            background: #FFE082;
+            color: #F57F17;
+        }
+
+        .badge-priority {
+            background: #FFCDD2;
+            color: #C62828;
+        }
+
+        .action-buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-large {
+            flex: 1;
+        }
+
+        .search-box {
+            margin-bottom: 15px;
+        }
+
+        #familyList {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .no-families {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h5>🚚 Sélectionner les familles à livrer</h5>
+
+        <!-- Filters Section -->
+        <div class="filters">
+            <div class="row">
+                <div class="input-field col s6">
+                    <select id="occasionSelect">
+                        <? for (var i = 0; i < occasions.length; i++) { ?>
+                        <option value="<?= occasions[i] ?>">
+                            <?= occasions[i] ?>
+                        </option>
+                        <? } ?>
+                    </select>
+                    <label>Occasion</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="date" id="dateLivraison" required>
+                    <label for="dateLivraison">Date de livraison</label>
+                </div>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchBox" placeholder="Rechercher par nom, adresse...">
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-value" id="totalFamilies">0</div>
+                <div class="stat-label">Total</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="selectedCount">0</div>
+                <div class="stat-label">Sélectionnées</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="totalParts">0</div>
+                <div class="stat-label">Parts totales</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="withChildren">0</div>
+                <div class="stat-label">Avec enfants</div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div style="margin-bottom: 15px;">
+            <button class="btn-small waves-effect" onclick="selectAll()">
+                <i class="material-icons left">check_box</i>Tout sélectionner
+            </button>
+            <button class="btn-small waves-effect" onclick="deselectAll()">
+                <i class="material-icons left">check_box_outline_blank</i>Tout désélectionner
+            </button>
+        </div>
+
+        <!-- Family List -->
+        <div id="familyList">
+            <div class="no-families">
+                <i class="material-icons large">folder_open</i>
+                <p>Chargement des familles...</p>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="btn-large waves-effect waves-light green" onclick="createDeliveries()">
+                <i class="material-icons left">add</i>
+                Créer les livraisons
+            </button>
+            <button class="btn-large waves-effect waves-light grey" onclick="google.script.host.close()">
+                <i class="material-icons left">close</i>
+                Annuler
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        let allFamilies = [];
+        let selectedFamilies = new Set();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            M.FormSelect.init(document.querySelectorAll('select'));
+            M.updateTextFields();
+
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('dateLivraison').value = today;
+
+            loadValidatedFamilies();
+
+            // Search functionality
+            document.getElementById('searchBox').addEventListener('input', filterFamilies);
+        });
+
+        function loadValidatedFamilies() {
+            google.script.run
+                .withSuccessHandler(displayFamilies)
+                .withFailureHandler(onError)
+                .getValidatedFamilies();
+        }
+
+        function displayFamilies(families) {
+            allFamilies = families;
+            const container = document.getElementById('familyList');
+
+            if (families.length === 0) {
+                container.innerHTML = `
+                    <div class="no-families">
+                        <i class="material-icons large">people</i>
+                        <p>Aucune famille validée disponible</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = '';
+            families.forEach(family => {
+                const card = createFamilyCard(family);
+                container.appendChild(card);
+            });
+
+            updateStats();
+        }
+
+        function createFamilyCard(family) {
+            const div = document.createElement('div');
+            div.className = 'family-card';
+            div.dataset.familyId = family.id;
+
+            const hasChildren = family.nombreEnfant > 0;
+            const totalParts = family.nombreAdulte + family.nombreEnfant;
+
+            div.innerHTML = `
+                <input type="checkbox" id="family_${family.id}" onchange="toggleFamily(${family.id})">
+                <label for="family_${family.id}" style="cursor: pointer; display: block;">
+                    <strong style="font-size: 16px;">${family.nom}</strong>
+                    ${hasChildren ? '<span class="badge badge-children">👶 Avec enfants</span>' : ''}
+                    
+                    <div class="family-info">
+                        <div class="info-item">
+                            <span class="label">📍 Adresse:</span><br>
+                            ${family.adresse}
+                        </div>
+                        <div class="info-item">
+                            <span class="label">📞 Téléphone:</span><br>
+                            ${family.telephone || 'N/A'}
+                        </div>
+                        <div class="info-item">
+                            <span class="label">📦 Parts:</span><br>
+                            ${totalParts} (${family.nombreAdulte} adultes, ${family.nombreEnfant} enfants)
+                        </div>
+                        <div class="info-item">
+                            <span class="label">🏘️ Quartier:</span><br>
+                            ${family.quartierNom || 'Non défini'}
+                        </div>
+                        <div class="info-item">
+                            <span class="label">📧 Email:</span><br>
+                            ${family.email || 'N/A'}
+                        </div>
+                        <div class="info-item">
+                            <span class="label">🚗 Se déplace:</span><br>
+                            ${family.seDeplace ? 'Oui' : 'Non'}
+                        </div>
+                    </div>
+                </label>
+            `;
+
+            div.onclick = function (e) {
+                if (e.target.tagName !== 'INPUT') {
+                    const checkbox = div.querySelector('input[type="checkbox"]');
+                    checkbox.checked = !checkbox.checked;
+                    toggleFamily(family.id);
+                }
+            };
+
+            return div;
+        }
+
+        function toggleFamily(familyId) {
+            const card = document.querySelector(`[data-family-id="${familyId}"]`);
+            const checkbox = document.getElementById(`family_${familyId}`);
+
+            if (checkbox.checked) {
+                selectedFamilies.add(familyId);
+                card.classList.add('selected');
+            } else {
+                selectedFamilies.delete(familyId);
+                card.classList.remove('selected');
+            }
+
+            updateStats();
+        }
+
+        function selectAll() {
+            const filtered = getFilteredFamilies();
+            filtered.forEach(family => {
+                selectedFamilies.add(family.id);
+                const checkbox = document.getElementById(`family_${family.id}`);
+                const card = document.querySelector(`[data-family-id="${family.id}"]`);
+                if (checkbox && card) {
+                    checkbox.checked = true;
+                    card.classList.add('selected');
+                }
+            });
+            updateStats();
+        }
+
+        function deselectAll() {
+            selectedFamilies.clear();
+            document.querySelectorAll('.family-card').forEach(card => {
+                card.classList.remove('selected');
+                card.querySelector('input[type="checkbox"]').checked = false;
+            });
+            updateStats();
+        }
+
+        function filterFamilies() {
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+            const cards = document.querySelectorAll('.family-card');
+
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+        }
+
+        function getFilteredFamilies() {
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+            return allFamilies.filter(family => {
+                const searchText = `${family.nom} ${family.adresse} ${family.quartierNom}`.toLowerCase();
+                return searchText.includes(searchTerm);
+            });
+        }
+
+        function updateStats() {
+            const selected = Array.from(selectedFamilies);
+            const selectedData = allFamilies.filter(f => selected.includes(f.id));
+
+            const totalParts = selectedData.reduce((sum, f) => sum + f.nombreAdulte + f.nombreEnfant, 0);
+            const withChildren = selectedData.filter(f => f.nombreEnfant > 0).length;
+
+            document.getElementById('totalFamilies').textContent = allFamilies.length;
+            document.getElementById('selectedCount').textContent = selected.length;
+            document.getElementById('totalParts').textContent = totalParts;
+            document.getElementById('withChildren').textContent = withChildren;
+        }
+
+        function createDeliveries() {
+            if (selectedFamilies.size === 0) {
+                M.toast({ html: 'Veuillez sélectionner au moins une famille', classes: 'orange' });
+                return;
+            }
+
+            const occasion = document.getElementById('occasionSelect').value;
+            const date = document.getElementById('dateLivraison').value;
+
+            if (!occasion || !date) {
+                M.toast({ html: 'Veuillez sélectionner une occasion et une date', classes: 'orange' });
+                return;
+            }
+
+            const familyIds = Array.from(selectedFamilies);
+
+            M.toast({ html: 'Création des livraisons en cours...', classes: 'blue' });
+
+            google.script.run
+                .withSuccessHandler(onSuccess)
+                .withFailureHandler(onError)
+                .createDeliveriesForFamilies(familyIds, occasion, date);
+        }
+
+        function onSuccess(result) {
+            M.toast({ html: `✅ ${result.count} livraison(s) créée(s)`, classes: 'green' });
+            setTimeout(() => {
+                google.script.host.close();
+            }, 1500);
+        }
+
+        function onError(error) {
+            M.toast({ html: `❌ Erreur: ${error.message}`, classes: 'red', displayLength: 4000 });
+        }
+    </script>
+</body>
+
+</html>

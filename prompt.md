@@ -32,16 +32,20 @@ Google_sheets/
 ├── config.js
 ├── services
 │   ├── apiService.js
+│   ├── cacheService.js
 │   ├── contactService.js
 │   ├── dataService.js
 │   ├── deliveryService.js
 │   ├── documentService.js
+│   ├── driveService.js
+│   ├── formHandlers.js
+│   ├── geocodingService.js
 │   ├── notificationService.js
 │   └── qrCodeService.js
 ├── triggers.js
 ├── ui
 │   ├── dialog.html
-│   ├── emailTemplates.js
+│   ├── familySelection.html
 │   └── menuControllers.js
 └── utils
     ├── helpers.js
@@ -50,30 +54,35 @@ Google_sheets/
 
 ## 📄 Google Sheets Structure
 
-### 📥 Form Responses (Raw data from Google Form) (The form exists in three languages)
+### 📥 Form Responses
 
-| Column Name                                                              | Description              |
-| ------------------------------------------------------------------------ | ------------------------ |
-| Timestamp                                                                | Form submission time     |
-| Email address                                                            | Contact email            |
-| Protection des données personnelles                                      | Consent                  |
-| Nom de famille                                                           | Family name              |
-| Prénom de la personne à contacter                                        | Contact first name       |
-| Numéro de téléphone de la personne à contacter                           | Contact phone            |
-| Êtes-vous actuellement hébergé(e) par une personne ou une organisation ? | Hosted by someone?       |
-| Par qui êtes-vous hébergé(e) ?                                           | Host details             |
-| Adresse                                                                  | Delivery address         |
-| Combien d'adultes vivent actuellement dans votre foyer ?                 | Number of adults         |
-| Combien d'enfants vivent actuellement dans votre foyer ?                 | Number of children       |
-| Décrivez brièvement votre situation actuelle                             | Description of situation |
-| Type de pièce d'identité                                                 | ID type                  |
-| Justificatif d’identité ou de résidence                                  | ID/Residence proof       |
-| Attestation de la CAF (paiement et/ou quotient familial)                 | CAF statement(s)         |
-| Travaillez-vous actuellement, vous ou votre conjoint(e) ?                | Employment status        |
-| Combien de jours par semaine travaillez-vous ?                           | Working days per week    |
-| Dans quel secteur travaillez-vous ?                                      | Work sector              |
-| Percevez-vous actuellement des aides d'autres organismes ?               | Receiving other aid      |
-| Veuillez soumettre tous justificatif de ressources                       | Other income proofs      |
+The titles contain spaces at the end sometimes and this needs to be taken account when parsing responses
+
+#### Familles
+
+The form exists in three languages this is the french language and later i will add the arabic and english versions. Note that multiple forms implies multiple shhets to record responses and multiple drive folders to store files
+
+|Timestamp | Email address | Protection des données personnelles | Nom de famille  | Prénom de la personne à contacter  | Numéro de téléphone de la personne à contacter  | Êtes-vous actuellement hébergé(e) par une personne ou une organisation ?  | Par qui êtes-vous hébergé(e) ?  | Adresse | Combien d'adultes vivent actuellement dans votre foyer ?  | Combien d'enfants vivent actuellement dans votre foyer ?  | Décrivez brièvement votre situation actuelle  | Type de pièce d'identité  | Justificatif d’identité ou de résidence  | Attestation de la CAF (paiement et/ou quotient familial)  | Attestation de la CAF (paiement et/ou quotient familial) | Travaillez-vous actuellement, vous ou votre conjoint(e) ?  | Combien de jours par semaine travaillez-vous ?  | Dans quel secteur travaillez-vous ?  | Percevez-vous actuellement des aides d'autres organismes ?  | Veuillez soumettre tous justificatif de ressources |
+
+#### livreurs
+
+|Timestamp | Email address | Nom | Prénom | Numéro de téléphone  | Disponibilité | Quel type de véhicule possédez-vous ?  | Avez vous le permis ? | Merci d’indiquer vos préférences en matière de zone de livraison | Merci d’indiquer vos préférences sur Nantes |
+
+For the question "Merci d’indiquer vos préférences en matière de zone de livraison" possible answers are :
+
+- Je peux livrer à Nantes et en dehors de Nantes => secteur = all
+- Je ne peux livrer que dans Nantes => secteur = seteurs de Nantes (secteur where nom_ville = Nantes)
+- Je ne peux livrer que dans certains lieux spécifiques sur Nantes (see next question)
+- Other (leave secteur empty until admin interviens)
+
+For the question "Merci d’indiquer vos préférences sur Nantes" possible answers are :
+
+- Nantes Nord
+- Nantes West
+- Nantes Est
+- Nantes Sud
+- Nantes Centre
+- Other (leave secteur empty until admin interviens)
 
 ---
 
@@ -113,6 +122,8 @@ Identité et CAF sont de type chip et pointe sur le fichier drive correspondant
 
 | id | nom | latitude | longitude | id_ville |
 
+nom is always : Nord,  West, Est, Sud, Centre
+
 ---
 
 ### 🏙️ Ville (City Information)
@@ -121,11 +132,39 @@ Identité et CAF sont de type chip et pointe sur le fichier drive correspondant
 
 ---
 
-### Workflow
+## 📂 Google Drive folder Structure
+
+```txt
+root/
+├── gestion_familles
+│   ├── familles (Google sheets)
+│   └── Google Formes
+│     ├── formulaire_livreur (Google Formes)
+│     ├── formulaire_familles_fr (Google Formes)
+│     ├── formulaire_familles_ar (Google Formes)
+│     ├── formulaire_familles_en (Google Formes)
+│     ├── Formulaire Inscription FR (File responses)
+        ├── Attestation de la CAF (paiement et/ou quotient familial)  (File responses)
+        ├── Veuillez soumettre tous justificatif de ressources (File responses)
+        ├── Attestation de la CAF (paiement et/ou quotient familial) (File responses)
+        └── Justificatif d’identité ou de résidence  (File responses)
+│     ├── Formulaire Inscription AR (File responses)
+        ├── شهادة من صندوق إعانات الأسرة (CAF) – (الدفع و/أو المعيار الاجتماعي) (File responses)
+        ├── يُرجى تقديم جميع المستندات التي تثبت الموارد (File responses)
+        ├── شهادة من صندوق إعانات الأسرة (CAF) – (الدفع و/أو المعيار الاجتماعي) (File responses)
+        └── مستند إثبات الهوية أو السكن (File responses)
+│     └── Formulaire Inscription EN (File responses)
+        ├── Certificate from CAF (payment and/or family quotient) (File responses)
+        ├── Please submit all proof of income/resources (File responses)
+        ├── Certificate from CAF (payment and/or family quotient) (File responses)
+        └── Proof of identity or residence (File responses)
+```
+
+## Workflow
 
 The targeted workflow is :
 
-#### For familes
+### For familes
 
 ```txt
 1. Family submits Google Form (multiple forms exists (at least 3 with three languages: french, arabic and english))
@@ -144,7 +183,7 @@ The targeted workflow is :
    - if documents are updated the full process must restart
 ```
 
-#### for drivers
+### for drivers
 
 ```txt
 1. driver submits Google Form
@@ -152,7 +191,7 @@ The targeted workflow is :
 2. onFormSubmit log into sheet livreur
 ```
 
-#### for deliveries
+### for deliveries
 
 ```txt
 1. When enough food is gathered
@@ -182,4 +221,4 @@ The targeted workflow is :
 11. Sccan QR code or clic link in email -> Status updated 'livré' or 'echec'
 ```
 
-The project is still in developpement so we can modify the google sheet and/or the GAS project structure if needed. Help me implement the missing functionalities and when done liste what can be improved/implemented to further automate and help us organize
+The project is still in developpement so we can modify the google sheet and/or the GAS project structure if needed. Help me implement the missing functionalities and when done write a migration guide with how to modify the current project with your updates
